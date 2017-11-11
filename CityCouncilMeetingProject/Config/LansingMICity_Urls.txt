@@ -1,0 +1,3 @@
+﻿Council*http://www.lansingmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=4&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Board*http://www.lansingmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=2&startDate=&endDate=&term=&prevVersionScreen=false
+Board of Zoning Appeals*http://www.lansingmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=3&startDate=&endDate=&term=&prevVersionScreen=false

@@ -1,0 +1,3 @@
+City Council*http://www.deltami.gov/index.php/your-government/board-agendas-minutes/
+Planning*http://www.deltami.gov/index.php/your-government/board-commissions-committee-agendas-minutes/?pagename=your-government%2Fboard-commissions-committee-agendas-minutes&folder=Planning+Commission&sortdir=
+Zoning*http://www.deltami.gov/index.php/your-government/board-commissions-committee-agendas-minutes/?pagename=your-government%2Fboard-commissions-committee-agendas-minutes&folder=Zoning+Board+of+Appeals&sortdir=

@@ -1,0 +1,6 @@
+City Council*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Council/2017.aspx
+City Council*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Council/2016.aspx
+Planning Commission*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Planning-Commission/2017.aspx
+Planning Commission*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Planning-Commission/2016.aspx
+Zoning Board of Appeals*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Zoning-Board-of-Appeals/2017.aspx
+Zoning Board of Appeals*http://www.ci.farmington-hills.mi.us/Government/Agendas-Minutes/Zoning-Board-of-Appeals/2016.aspx

@@ -1,0 +1,6 @@
+City Council*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2017&catID=1&term=&prevVersionScreen=false
+Planning Commission*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2017&catID=10&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2017&catID=12&term=&prevVersionScreen=false
+City Council*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2016&catID=1&term=&prevVersionScreen=false
+Planning Commission*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2016&catID=10&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://cityofmidlandmi.gov/AgendaCenter/UpdateCategoryList?year=2016&catID=12&term=&prevVersionScreen=false

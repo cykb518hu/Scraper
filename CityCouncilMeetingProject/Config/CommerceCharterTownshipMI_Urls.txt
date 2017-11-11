@@ -1,0 +1,3 @@
+City Council*http://www.commercetwp.com/minutes_trustees_{0}
+Zoning Board of Appeals*http://www.commercetwp.com/minutes_zba_{0}
+Planning Commission*http://www.commercetwp.com/minutes_planning_{0}

@@ -1,0 +1,1 @@
+City Council*http://cityofgaylord.com/{0}{1}.cfm

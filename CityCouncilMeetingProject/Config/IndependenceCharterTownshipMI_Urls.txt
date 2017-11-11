@@ -1,0 +1,9 @@
+City Council*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=2388d888-6cc0-427d-8bcb-933202996aff&Key={0}
+City Council*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=fe718ea0-9944-46c4-97fc-08de0c084400&Key={0}
+City Council*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=6a377fc8-408e-4824-b062-395b53ff49eb&Key={0}
+Planning Commission*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=36a7bdc1-0eda-4d43-8f0a-60cefba6abb2&Key={0}
+Planning Commission*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=19dc215b-3c00-4214-96c8-f5e6a965fe42&Key={0}
+Planning Commission*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=a6c5f5a8-f0f7-4af7-8d2c-a1878ed312c7&Key={0}
+Zoning Board of Appeals*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=8cc93fc3-576c-4aa6-ba29-cd3d55ef64f6&Key={0}
+Zoning Board of Appeals*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=6e3463a6-3ed2-4205-87b1-65731f4ad9ed&Key={0}
+Zoning Board of Appeals*https://independencetwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=60a38e37-2d3c-4491-9f1c-6bf7713c112a&Key={0}

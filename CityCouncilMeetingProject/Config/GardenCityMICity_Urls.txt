@@ -1,0 +1,6 @@
+City Council*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=2&term=&prevVersionScreen=false
+City Council*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=2&term=&prevVersionScreen=false
+Planning Commission*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=6&term=&prevVersionScreen=false
+Planning Commission*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=6&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=7&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.gardencitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=7&term=&prevVersionScreen=false

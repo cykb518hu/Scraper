@@ -1,0 +1,5 @@
+City Council*https://kalamazoo.novusagenda.com/Agendapublic/#
+Planning Commission*http://www.kalamazoocity.org/reports/citycommissionagendas/boards/AdvisoryBoardAgendas.asp?Board=PCB&BoardName=Planning%20Commission
+Planning Commission*http://www.kalamazoocity.org/reports/citycommissionagendas/boards/AdvisoryBoardMinutes.asp?Board=PCB&BoardName=Planning%20Commission
+Zoning Board of Appeals*http://www.kalamazoocity.org/reports/citycommissionagendas/boards/AdvisoryBoardAgendas.asp?Board=ZBA&BoardName=Zoning%20Board%20of%20Appeals
+Zoning Board of Appeals*http://www.kalamazoocity.org/reports/citycommissionagendas/boards/AdvisoryBoardMinutes.asp?Board=ZBA&BoardName=Zoning%20Board%20of%20Appeals

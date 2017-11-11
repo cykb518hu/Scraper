@@ -1,0 +1,3 @@
+City Council*http://www.cityofvassar.org/AgendaCenter/UpdateCategoryList?year={0}&catID=2&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.cityofvassar.org/AgendaCenter/UpdateCategoryList?year={0}&catID=7&term=&prevVersionScreen=false
+Planning Commission*http://www.cityofvassar.org/AgendaCenter/UpdateCategoryList?year={0}&catID=8&term=&prevVersionScreen=false

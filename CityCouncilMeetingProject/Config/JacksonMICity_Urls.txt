@@ -1,0 +1,6 @@
+City Council*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2017&catID=3&term=&prevVersionScreen=false
+City Council*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2016&catID=3&term=&prevVersionScreen=false
+Planning Commission*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2017&catID=7&term=&prevVersionScreen=false
+Planning Commission*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2016&catID=7&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2017&catID=1&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.cityofjackson.org/AgendaCenter/UpdateCategoryList?year=2016&catID=1&term=&prevVersionScreen=false

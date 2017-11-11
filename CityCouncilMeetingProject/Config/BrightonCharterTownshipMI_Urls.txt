@@ -1,0 +1,4 @@
+Zoning Board of Appeals*http://www.brightontwp.com/AgendaCenter/UpdateCategoryList?year={0}&catID=4&term=&prevVersionScreen=false
+Planning Commission*http://www.brightontwp.com/AgendaCenter/UpdateCategoryList?year={0}&catID=2&term=&prevVersionScreen=false
+City Council*http://www.brightontwp.com/AgendaCenter/UpdateCategoryList?year={0}&catID=5&term=&prevVersionScreen=false
+

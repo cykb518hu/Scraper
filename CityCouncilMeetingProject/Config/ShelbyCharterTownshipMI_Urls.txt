@@ -1,0 +1,7 @@
+City Council*http://shelbytownmi.iqm2.com/Citizens/Calendar.aspx?From={0}&To={1}
+City Council*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=5ffd5fca-ab06-449b-a662-9f7fc4de2dac&Key={0}
+City Council*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=c8ce6ebd-a4cf-4737-bbbd-39a4c5c2c84d&Key={0}
+Planning Commission*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=e4ae0bc5-197c-49d1-9845-12b5dd3bf97b&Key={0}
+Planning Commission*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=35c5e6c5-a3aa-4d08-8bd4-df4e026c0bb4&Key={0}
+Zoning Board of Appeals*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=4319b439-14c6-4cc5-bd3c-38f645b0f1ab&Key={0}
+Zoning Board of Appeals*https://shelbytwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=7fbefde5-9288-4c8b-ae13-ff6ec3c0f36f&Key={0}

@@ -1,0 +1,2 @@
+Planning Commission*http://mi-eastgrandrapids.civicplus.com/AgendaCenter/UpdateCategoryList?year={0}&catID=4&startDate=&endDate=&term=&prevVersionScreen=false
+City Commission*http://mi-eastgrandrapids.civicplus.com/AgendaCenter/UpdateCategoryList?year={0}&catID=1&startDate=&endDate=&term=&prevVersionScreen=false

@@ -1,0 +1,1 @@
+http://www.twp-pittsfield.org/Archive.aspx?ysnExecuteSearch=1&txtKeywords=&lngArchiveMasterID=0&txtDateRange=&dtiStartDate=01%2F01%2F{0}&dtiEndDate={1}

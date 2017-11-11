@@ -1,0 +1,3 @@
+Planning Commission*http://www.meridian.mi.us/index.asp?Type=B_BASIC&SEC={0AB30526-4433-435E-BD30-5A12C103B34A}
+Zoning Board of Appeals*http://www.meridian.mi.us/index.asp?SEC=6EA074E1-3FC4-41AD-BECE-82A1445131DF&Type=B_BASIC
+City Council*http://www.meridian.mi.us/index.asp?SEC=DFDA94CD-CCD9-4A50-85F7-0E31C58B5E3A&Type=B_BASIC

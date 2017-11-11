@@ -1,0 +1,3 @@
+City Council*http://monroecitymi.iqm2.com/Citizens/Calendar.aspx?From={0}&To={1}
+Planning Commission*http://www.monroemi.gov/documents/Minutes/Citizens%20Planning%20Commission/{0}/
+Zoning Board of Appeals*http://www.monroemi.gov/documents/Minutes/zba/{0}/

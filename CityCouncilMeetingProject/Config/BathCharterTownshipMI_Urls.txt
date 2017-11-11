@@ -1,0 +1,8 @@
+Council*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=fbb72ea6-e324-478e-bef3-69ca2ae52082&Key={0}
+Council*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=9abb8e36-a3c9-4ce8-9c2a-cd3f08941f9c&Key={0}
+Council*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=560abf88-7596-45f6-887d-bfcda13e4e04&Key={0}
+Planning*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=2444ca1b-7fb4-4bfc-acaa-2f6130dbb0a3&Key={0}
+Planning*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=a009a2a4-d1e5-405c-bcd9-24c6ae7479bd&Key={0}
+Planning*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=6b5dc1db-43e0-43a9-b2a4-a4fa9b2b2608&Key={0}
+Zoning*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=8f5999a0-a16f-4dc2-8adc-af5007fa32eb&Key={0}
+Zoning*https://bathtwpmi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=a2a7f708-8b4a-e611-a245-001fbc00ed84&Key={0}

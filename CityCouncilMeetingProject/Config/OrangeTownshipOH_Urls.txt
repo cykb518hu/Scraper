@@ -1,0 +1,2 @@
+City Council*http://orangetwp.org/AgendaCenter/UpdateCategoryList?year={0}&catID=3&startDate=&endDate=&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://orangetwp.org/AgendaCenter/UpdateCategoryList?year={0}&catID=7&startDate=&endDate=&term=&prevVersionScreen=false

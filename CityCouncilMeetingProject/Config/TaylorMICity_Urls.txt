@@ -1,0 +1,4 @@
+﻿Council*http://www.cityoftaylor.com/AgendaCenter/UpdateCategoryList?year=2017&catID=2&startDate=&endDate=&term=&prevVersionScreen=false
+Council*http://www.cityoftaylor.com/AgendaCenter/UpdateCategoryList?year=2016&catID=2&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*http://www.cityoftaylor.com/AgendaCenter/UpdateCategoryList?year=2016&catID=3&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*http://www.cityoftaylor.com/AgendaCenter/UpdateCategoryList?year=2017&catID=3&startDate=&endDate=&term=&prevVersionScreen=false

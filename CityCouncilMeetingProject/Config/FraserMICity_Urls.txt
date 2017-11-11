@@ -1,0 +1,3 @@
+City Counci*http://www.ci.fraser.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=8&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*http://www.ci.fraser.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=3&startDate=&endDate=&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.ci.fraser.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=5&startDate=&endDate=&term=&prevVersionScreen=false

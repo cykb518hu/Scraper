@@ -1,0 +1,3 @@
+City Commission*http://www.ci.lapeer.mi.us/agendas_and_meetings/city_commission.php
+Planning*http://www.ci.lapeer.mi.us/agendas_and_meetings/planning_commission.php
+Zoning*http://www.ci.lapeer.mi.us/agendas_and_meetings/zoning_board_of_appeals.php

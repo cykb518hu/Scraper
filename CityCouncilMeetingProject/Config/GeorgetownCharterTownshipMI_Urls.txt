@@ -1,0 +1,3 @@
+Planning Commission*http://www.georgetown-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=5&term=&prevVersionScreen=false
+City Council*http://www.georgetown-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=9&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.georgetown-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=7&term=&prevVersionScreen=false

@@ -1,0 +1,9 @@
+City Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=4c1c5921-6159-4223-a361-0e6c26db04c0&Key={0}
+City Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=f62720c9-4136-498e-8c7e-2413c949cb7d&Key={0}
+City Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=5deb6094-c872-4ad9-88f4-963f2b7717ec&Key={0}
+Planning Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=1063c358-9bf2-4ce6-8079-8dfa57897340&Key={0}
+Planning Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=b3fd32cd-8f0c-4f4c-84ff-7ecf9918a184&Key={0}
+Planning Commission*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=2aad4b68-153f-407d-8d5e-9b437a97cc37&Key={0}
+Zoning Board of Appeals*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=45e091f5-c7c9-41d6-bdfd-99e6985c72ce&Key={0}
+Zoning Board of Appeals*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=379e2a8b-50d3-4639-b67e-abf6e8203b27&Key={0}
+Zoning Board of Appeals*https://bloomfieldhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=9afabf45-a0f4-418e-9e59-a7c84dfb3efb&Key={0}

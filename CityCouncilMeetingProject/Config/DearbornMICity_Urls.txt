@@ -1,0 +1,12 @@
+﻿http://www.cityofdearborn.org/documents/city-council/city-council-agendas/2017-aagendas?limit=100&limitstart=0
+http://www.cityofdearborn.org/documents/city-council/city-council-agendas/2016-agendas?limit=100&limitstart=0
+http://www.cityofdearborn.org/documents/city-council/city-council-minutes/2017-minutes?limit=100&limitstart=0
+http://www.cityofdearborn.org/documents/city-council/city-council-minutes/2016-minutes?limit=100&limitstart=0
+http://www.cityofdearborn.org/documents/commissions-and-boards/planning-commission/planning-commission-agendas/2017-agendas?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/planning-commission/planning-commission-agendas/2016-agendas-1?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/planning-commission/planning-commission-minutes/2017-minutes-2?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/planning-commission/planning-commission-minutes/2016-minutes-1?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/zoning-board-of-appeals/zoning-board-of-appeals-minutes/2017-minutes-1?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/zoning-board-of-appeals/zoning-board-of-appeals-minutes/2016-minutes-3?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/zoning-board-of-appeals/zoning-board-of-appeals-notices/2017-notices?sort=created_on&direction=desc
+http://www.cityofdearborn.org/documents/commissions-and-boards/zoning-board-of-appeals/zoning-board-of-appeals-notices/2016-notices?sort=created_on&direction=desc

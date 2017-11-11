@@ -1,0 +1,31 @@
+﻿"Canton","http://www.canton-mi.org/", - done
+"Canton Charter Township","http://www.canton-mi.org/", - done
+"Bay City, City of","http://www.baycitymi.org/", - done
+"East Lansing, City of","http://www.cityofeastlansing.com/", - done
+"Lansing, City of","http://www.lansingmi.gov/", - done
+"Plymouth, City of","http://www.ci.plymouth.mi.us/", - done
+"Taylor, City of","http://www.cityoftaylor.com/", - done
+"Ypsilanti, City of","http://cityofypsilanti.com/", - done
+"Waterford Charter Township","http://www.twp.waterford.mi.us/", - done
+"Georgetown Charter Township","http://www.gtwp.com/", - done
+""Inkster, City of","http://www.cityofinkster.com/"," - done
+"Jackson, City of","http://www.cityofjackson.org/", - done
+"Macomb Township","http://www.macomb-mi.gov/", - done
+"Sterling Heights, City of","http://www.sterling-heights.net/", - done
+"Royal Oak, City of","http://www.ci.royal-oak.mi.us/", - done
+
+"Brighton Charter Township","http://www.brightontwp.com/", - done
+"Cadillac, City of","http://www.cadillac-mi.net/", - done
+"Davison, City of","http://www.cityofdavison.org/", - done
+"Dundee, Village of","http://www.dundeevillage.net/", - done
+"East Grand Rapids, City of","http://www.eastgr.org/", - done
+"Fraser, City of","http://www.ci.fraser.mi.us/", - done
+"Iron Mountain, City of","http://www.cityofironmountain.com/", - done
+"Manistee, City of","http://www.manisteemi.gov/", - done
+"Marlette, City of","http://www.cityofmarlette.com/", - done
+"Richmond, City of","http://www.cityofrichmond.net/", - done
+"Rochester, City of","http://www.ci.rochester.mi.us/", - done
+"Vassar, City of","http://www.cityofvassar.org/", - done
+"Watervliet, City of","http://www.watervliet.org/", - pending test
+"Zeeland, City of","http://www.ci.zeeland.mi.us/", - done
+"Ionia, City of","http://www.ci.ionia.mi.us/", - done

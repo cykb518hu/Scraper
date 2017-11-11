@@ -1,0 +1,6 @@
+City Council*http://www.cadillac-mi.net/AgendaCenter/UpdateCategoryList?year={0}&catID=2&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*http://www.cadillac-mi.net/Archive.aspx?AMID=60&Type=&ADID=
+Planning Commission*http://www.cadillac-mi.net/Archive.aspx?AMID=47&Type=&ADID=
+Zoning Board of Appeals*http://www.cadillac-mi.net/Archive.aspx?AMID=50&Type=&ADID=
+Zoning Board of Appeals*http://www.cadillac-mi.net/Archive.aspx?AMID=64&Type=&ADID=
+

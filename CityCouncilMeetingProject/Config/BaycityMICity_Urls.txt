@@ -1,0 +1,6 @@
+City Commission*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=6&term=&prevVersionScreen=false
+City Commission*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=6&term=&prevVersionScreen=false
+Planning Commission*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=2&term=&prevVersionScreen=false
+Planning Commission*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=2&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2017&catID=5&term=&prevVersionScreen=false
+Zoning Board of Appeals*http://www.baycitymi.org/AgendaCenter/UpdateCategoryList?year=2016&catID=5&term=&prevVersionScreen=false

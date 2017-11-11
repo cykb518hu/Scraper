@@ -1,0 +1,2 @@
+City Council*http://www.detroitmi.gov/Government/City-Council/City-Council-Sessions/ModuleID/8319/ItemID/{0}/mctl/EventDetails"3142
+Zoning Board of Appeals*http://www.detroitmi.gov/Government/Boards/Board-of-Zoning-Appeal-Calendar/ModuleID/9955/ItemID/{0}/mctl/EventDetails

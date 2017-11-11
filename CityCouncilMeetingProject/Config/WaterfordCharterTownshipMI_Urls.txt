@@ -1,0 +1,4 @@
+City Council*https://waterfordmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=6&term=&prevVersionScreen=false
+City Council*https://waterfordmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=11&term=&prevVersionScreen=false
+Planning Commission*https://waterfordmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=7&term=&prevVersionScreen=false
+Zoning Board of Appeals*https://waterfordmi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=8&term=&prevVersionScreen=false

@@ -1,0 +1,6 @@
+City Council*https://www.hct.holland.mi.us/agendas-a-minutes/township-board/agendas
+City Council*https://www.hct.holland.mi.us/agendas-a-minutes/township-board/minutes
+Zoning Board of Appeals*https://www.hct.holland.mi.us/agendas-a-minutes/zoning-board-of-appeals/agendas
+Zoning Board of Appeals*https://www.hct.holland.mi.us/agendas-a-minutes/zoning-board-of-appeals/minutes
+Planning Commission*https://www.hct.holland.mi.us/agendas-a-minutes/planning-commission/agendas
+Planning Commission*https://www.hct.holland.mi.us/agendas-a-minutes/planning-commission/minutes

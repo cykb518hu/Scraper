@@ -1,0 +1,3 @@
+City Council*http://portagemi.boardsync.com/web/UserControls/DocPreview.aspx?aoid={0}*33
+Zoning Board of Appeals*http://www.portagemi.gov/Boards-and-Commissions/ZoningBoardofAppeals.aspx
+Planning Commission*http://www.portagemi.gov/Boards-and-Commissions/PlanningCommission.aspx

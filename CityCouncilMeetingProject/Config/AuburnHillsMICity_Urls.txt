@@ -1,0 +1,7 @@
+City Council*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=3861f9c0-ca43-40d5-8dbd-a1e00845f443&Key={0}
+City Council*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=ff9f15b3-7c48-4df3-a43c-e469a293ced6&Key={0}
+City Council*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=dec16944-6205-4d08-8d19-be322ff72e29&Key={0}
+Planning Commission*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=ae0573a0-02d8-4339-ac55-8928f44e91c3&Key={0}
+Planning Commission*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=32aaa262-9b22-4442-9c01-a8fd55f69990&Key={0}
+Zoning Board of Appeals*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=2daea990-6f44-44e0-a84f-e34cd4df4c1e&Key={0}
+Zoning Board of Appeals*https://auburnhillscitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=ae6c97cb-af7f-47c4-a953-f60e687be57d&Key={0}

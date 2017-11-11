@@ -1,0 +1,406 @@
+﻿[
+  {
+    "City": "FlintMICity",
+    "Date": "2017-03-21"
+  },
+  {
+    "City": "WarrenMICity",
+    "Date": "2017-03-21"
+  },
+  {
+    "City": "YpsilantiMICity",
+    "Date": "2017-03-21"
+  },
+  {
+    "City": "LincolnParkCity",
+    "Date": "2017-03-21"
+  },
+  {
+    "City": "DetroitMICity",
+    "Date": "2017-03-21"
+  },
+  {
+    "City": "ScioTownshipMI",
+    "Date": "2017-04-24"
+  },
+  {
+    "City": "AlgonacMICity",
+    "Date": "2017-04-24"
+  },
+  {
+    "City": "RomulusMICity",
+    "Date": "2017-04-24"
+  },
+  {
+    "City": "SaginawMICity",
+    "Date": "2017-04-24"
+  },
+  {
+    "City": "WayneMICity",
+    "Date": "2017-04-24"
+  },
+  {
+    "City": "NoviMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "MadisonHeightsMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "SouthfieldMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "LansingMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "TaylorMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "TroyMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "DearbornMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "AnnArborMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "SterlingHeightsMICity",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "SaginawTownshipMI",
+    "Date": "2017-05-09"
+  },
+  {
+    "City": "BattleCreekMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "BaycityMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "EastLansingMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "FarmingtonHillsMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "JacksonMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "KalamazooMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "KentwoodMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "MidlandMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "PontiacMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "RochesterHillsMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "RosevilleMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "WyomingMICity",
+    "Date": "2017-05-25"
+  },
+  {
+    "City": "LansingCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "ClintonCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "HarrisonCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "MarshallMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "ShelbyCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "WaterfordCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "GrandRapidsMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "CantonTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "BedfordTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "FlintCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "MeridianCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "GardenCityMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "BurtonMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "SaintClairShoresMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "GeorgetownCharterTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "MacombTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "NorthvilleTownshipMI",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "OakparkMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "PortageMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "EastpointeMICity",
+    "Date": "2017-06-14"
+  },
+  {
+    "City": "RedfordTownshipMI",
+    "Date": "2017-06-15"
+  },
+  {
+    "City": "PittsfieldCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "PlymouthCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "WestBloomfieldCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "InksterMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "AllenParkMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "GlandBlancCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "CommerceCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "BloomfieldCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "OshtemoCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "AdrianMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "OwossoMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "WyandotteMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "GainesCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "DavisonTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "BrowntownCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "IndependenceCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "MonroeMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "GeneseeCharterTownshipMI",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "HamtramckMICity",
+    "Date": "2017-07-10"
+  },
+  {
+    "City": "OscodaTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "BrandonTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "EastTawasMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "CottrellvilleTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "OregonTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "BuenaVistaCharterTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "LudingtonMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "RoyalOakMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "WashingtonTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "MarletteMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "GrosseIleTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "BloomfieldHillsMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "IoniaMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "ZeelandMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "VassarMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "BrightonCharterTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "CadillacMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "DundeeVillageMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "EastGrandRapidsMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "FraserMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "IronMountainMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "DavisonMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "ManisteeMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "RichmondMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "RochesterMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "WatervlietMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "FremontMICity",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "BangorCharterTownshipMI",
+    "Date": "2017-08-17"
+  },
+  {
+    "City": "StClairTownshipMI",
+    "Date": "2017-08-17"
+  }
+]

@@ -1,0 +1,3 @@
+City Council*https://www.macomb-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=2&term=&prevVersionScreen=false
+Planning Commission*https://www.macomb-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=3&term=&prevVersionScreen=false
+Zoning Board of Appeals*https://www.macomb-mi.gov/AgendaCenter/UpdateCategoryList?year={0}&catID=4&term=&prevVersionScreen=false

@@ -1,0 +1,3 @@
+Zoning Board of Appeals*http://www.ci.zeeland.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=4&term=&prevVersionScreen=false
+City Council*http://www.ci.zeeland.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=5&term=&prevVersionScreen=false
+Planning Commission*http://www.ci.zeeland.mi.us/AgendaCenter/UpdateCategoryList?year={0}&catID=2&term=&prevVersionScreen=false

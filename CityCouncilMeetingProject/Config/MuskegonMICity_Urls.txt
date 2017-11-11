@@ -1,0 +1,10 @@
+Council*http://www.muskegon-mi.gov/documents/type/31/{0}/
+Council*http://www.muskegon-mi.gov/documents/type/27/{0}/
+City Commission*http://www.muskegon-mi.gov/documents/type/2/{0}/
+City Commission*http://www.muskegon-mi.gov/documents/type/1/{0}/
+City Commission*http://www.muskegon-mi.gov/documents/type/3/{0}/
+Planning*http://www.muskegon-mi.gov/documents/type/11/{0}/
+Planning*http://www.muskegon-mi.gov/documents/type/28/{0}/
+Planning*http://www.muskegon-mi.gov/documents/type/43/{0}/
+ZBA*http://www.muskegon-mi.gov/documents/type/4/{0}/
+ZBA*http://www.muskegon-mi.gov/documents/type/29/{0}/

@@ -1,0 +1,6 @@
+Council*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2017&catID=23&startDate=&endDate=&term=&prevVersionScreen=false
+Council*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2016&catID=23&startDate=&endDate=&term=&prevVersionScreen=false
+Zoning Board of Appeals*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2017&catID=22&startDate=&endDate=&term=&prevVersionScreen=false
+Zoning Board of Appeals*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2016&catID=22&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2017&catID=20&startDate=&endDate=&term=&prevVersionScreen=false
+Planning Commission*https://www.sterling-heights.net/AgendaCenter/UpdateCategoryList?year=2016&catID=20&startDate=&endDate=&term=&prevVersionScreen=false

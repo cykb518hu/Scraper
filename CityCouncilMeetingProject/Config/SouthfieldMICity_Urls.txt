@@ -1,0 +1,9 @@
+https://www.cityofsouthfield.com/NewsEvents/tabid/158/cmd1480/arch/Default.aspx
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=27218bda-602a-4637-a510-71d748c286e7&Key=2017
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=806c9abc-9809-449d-a172-72ee306aaea0&Key=2017
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=5272727b-e070-45a0-9565-85b814f737a9&Key=2017
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=806c9abc-9809-449d-a172-72ee306aaea0&Key=2016
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=2f12df9c-277e-4c3b-8ae3-dc58091f8385&Key=2016
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=5272727b-e070-45a0-9565-85b814f737a9&Key=2016
+Council*https://southfieldcitymi.documents-on-demand.com/MOD/JsonDisplayFolderDocuments/?FolderId=27218bda-602a-4637-a510-71d748c286e7&Key=2016
+Planning Commission*https://www.cityofsouthfield.com/CityDepartments/LZ/Planning/PlanningCOMMMinutes/tabid/977/Default.aspx

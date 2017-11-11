@@ -1,0 +1,2 @@
+City Council*http://www.stclairtwp.org/{0}-township-board-minutes.html
+Planning Commission*http://www.stclairtwp.org/{0}-planning-commission-minutes.html
