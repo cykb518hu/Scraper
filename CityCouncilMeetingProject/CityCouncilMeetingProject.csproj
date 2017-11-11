@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF871DFA-E818-4168-BACC-FC44F0174941}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CityCouncilMeetingProject</RootNamespace>
+    <AssemblyName>CityCouncilMeetingProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.10.0.25331, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.10.0\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.29.0.967, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.29.0.967\lib\net40\Google.Apis.Drive.v3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\Software\SDKs\HtmlAgilityPack.1.4.6\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Software\SDKs\itextsharp-all-5.5.5\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\Software\SDKs\itextsharp-all-5.5.5\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\Software\SDKs\itextsharp-all-5.5.5\itextsharp-dll-xtra\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\..\Software\SDKs\Selenium\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\..\Software\SDKs\Selenium\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\..\Software\SDKs\Selenium\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\..\Software\SDKs\Selenium\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActonMACity.cs" />
+    <Compile Include="AdrianMICity.cs" />
+    <Compile Include="AgawamMACity.cs" />
+    <Compile Include="AlgonacMICity.cs" />
+    <Compile Include="AllenParkMICity.cs" />
+    <Compile Include="AlmontVillageMI.cs" />
+    <Compile Include="AmherstTownMA.cs" />
+    <Compile Include="AnnArborCharterTownshipMI.cs" />
+    <Compile Include="AnnArborMICity.cs" />
+    <Compile Include="AuburnHillsMICity.cs" />
+    <Compile Include="BangorCharterTownshipMI.cs" />
+    <Compile Include="BathCharterTownshipMI.cs" />
+    <Compile Include="BattleCreekMICity.cs" />
+    <Compile Include="BaycityMICity.cs" />
+    <Compile Include="BedfordTownshipMI.cs" />
+    <Compile Include="BlackmanCharterTownshipMI.cs" />
+    <Compile Include="BloomfieldCharterTownshipMI.cs" />
+    <Compile Include="BloomfieldHillsMICity.cs" />
+    <Compile Include="BrandonTownshipMI.cs" />
+    <Compile Include="BreedsvilleVillageMI.cs" />
+    <Compile Include="BridgewaterTownshipMI.cs" />
+    <Compile Include="BrightonCharterTownshipMI.cs" />
+    <Compile Include="BrowntownCharterTownshipMI.cs" />
+    <Compile Include="BuchananMICity.cs" />
+    <Compile Include="BuenaVistaCharterTownshipMI.cs" />
+    <Compile Include="BurtonMICity.cs" />
+    <Compile Include="CadillacMICity.cs" />
+    <Compile Include="ChesaningVillageMI.cs" />
+    <Compile Include="ChesterfieldCharterTownshipMI.cs" />
+    <Compile Include="ClareMICity.cs" />
+    <Compile Include="CottrellvilleTownshipMI.cs" />
+    <Compile Include="CrockeryTownshipMI.cs" />
+    <Compile Include="DavisonMICity.cs" />
+    <Compile Include="CantonTownshipMI.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="ClintonCharterTownshipMI.cs" />
+    <Compile Include="CommerceCharterTownshipMI.cs" />
+    <Compile Include="DavisonTownshipMI.cs" />
+    <Compile Include="DearbornMICity.cs" />
+    <Compile Include="DelhiCharterTownshipMI.cs" />
+    <Compile Include="DeltaCharterTownshipMI.cs" />
+    <Compile Include="DetroitMICity.cs" />
+    <Compile Include="DundeeVillageMI.cs" />
+    <Compile Include="EastGrandRapidsMICity.cs" />
+    <Compile Include="EastLansingMICity.cs" />
+    <Compile Include="EastpointeMICity.cs" />
+    <Compile Include="EastTawasMICity.cs" />
+    <Compile Include="Entities.cs" />
+    <Compile Include="FarmingtonHillsMICity.cs" />
+    <Compile Include="FerndaleMICity.cs" />
+    <Compile Include="FlintCharterTownshipMI.cs" />
+    <Compile Include="FlintMICity.cs" />
+    <Compile Include="FlushingMICity.cs" />
+    <Compile Include="FraserMICity.cs" />
+    <Compile Include="FremontMICity.cs" />
+    <Compile Include="GainesCharterTownshipMI.cs" />
+    <Compile Include="GardenCityMICity.cs" />
+    <Compile Include="GaylordMICity.cs" />
+    <Compile Include="GeneseeCharterTownshipMI.cs" />
+    <Compile Include="GeneseeTownshipMI.cs" />
+    <Compile Include="GeorgetownCharterTownshipMI.cs" />
+    <Compile Include="GrosseIleTownshipMI.cs" />
+    <Compile Include="HagarTownshipMI.cs" />
+    <Compile Include="HollyTownshipMI.cs" />
+    <Compile Include="IoniaMICity.cs" />
+    <Compile Include="IronMountainMICity.cs" />
+    <Compile Include="GlandBlancCharterTownshipMI.cs" />
+    <Compile Include="GrandRapidsMICity.cs" />
+    <Compile Include="HamtramckMICity.cs" />
+    <Compile Include="HarrisonCharterTownshipMI.cs" />
+    <Compile Include="HollandCharterTownshipMI.cs" />
+    <Compile Include="IndependenceCharterTownshipMI.cs" />
+    <Compile Include="InksterMICity.cs" />
+    <Compile Include="JacksonMICity.cs" />
+    <Compile Include="KalamazooMICity.cs" />
+    <Compile Include="KalkaskaVillageMI.cs" />
+    <Compile Include="KentwoodMICity.cs" />
+    <Compile Include="KingsleyVillageMI.cs" />
+    <Compile Include="LansingCharterTownshipMI.cs" />
+    <Compile Include="LansingMICity.cs" />
+    <Compile Include="LapeerMICity.cs" />
+    <Compile Include="LincolnParkCity.cs" />
+    <Compile Include="LivoniaMICity.cs" />
+    <Compile Include="LudingtonMICity.cs" />
+    <Compile Include="MacombTownshipMI.cs" />
+    <Compile Include="MadisonHeightsMICity.cs" />
+    <Compile Include="ManisteeMICity.cs" />
+    <Compile Include="MarletteMICity.cs" />
+    <Compile Include="MarshallMICity.cs" />
+    <Compile Include="MeridianCharterTownshipMI.cs" />
+    <Compile Include="MidlandMICity.cs" />
+    <Compile Include="MonroeMICity.cs" />
+    <Compile Include="MountPleasantMICity.cs" />
+    <Compile Include="MuskegonMICity.cs" />
+    <Compile Include="NilesMICity.cs" />
+    <Compile Include="NorthvilleTownshipMI.cs" />
+    <Compile Include="NoviMICity.cs" />
+    <Compile Include="OakparkMICity.cs" />
+    <Compile Include="OrangeTownshipOH.cs" />
+    <Compile Include="OregonTownshipMI.cs" />
+    <Compile Include="OscodaTownshipMI.cs" />
+    <Compile Include="OshtemoCharterTownshipMI.cs" />
+    <Compile Include="OwossoMICity.cs" />
+    <Compile Include="PinckneyVillageMI.cs" />
+    <Compile Include="PinconningTownshipMI.cs" />
+    <Compile Include="PittsfieldCharterTownshipMI.cs" />
+    <Compile Include="PlymouthCharterTownshipMI.cs" />
+    <Compile Include="PontiacMICity.cs" />
+    <Compile Include="PortageMICity.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvincetownTownshipMA.cs" />
+    <Compile Include="RedfordTownshipMI.cs" />
+    <Compile Include="RichmondMICity.cs" />
+    <Compile Include="RochesterHillsMICity.cs" />
+    <Compile Include="RochesterMICity.cs" />
+    <Compile Include="RomulusMICity.cs" />
+    <Compile Include="RoscommonTownshipMI.cs" />
+    <Compile Include="RosevilleMICity.cs" />
+    <Compile Include="RoyalOakMICity.cs" />
+    <Compile Include="SaginawMICity.cs" />
+    <Compile Include="SaginawTownshipMI.cs" />
+    <Compile Include="SaintClairShoresMICity.cs" />
+    <Compile Include="ScioTownshipMI.cs" />
+    <Compile Include="ShelbyCharterTownshipMI.cs" />
+    <Compile Include="ShutesburyTownMA.cs" />
+    <Compile Include="SomervilleMACity.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="SouthfieldMICity.cs" />
+    <Compile Include="SouthgateMICity.cs" />
+    <Compile Include="StClairTownshipMI.cs" />
+    <Compile Include="SterlingHeightsMICity.cs" />
+    <Compile Include="SumpterTownshipMI.cs" />
+    <Compile Include="TaylorMICity.cs" />
+    <Compile Include="ThetfordTownshipMI.cs" />
+    <Compile Include="TraverseMICity.cs" />
+    <Compile Include="TroyMICity.cs" />
+    <Compile Include="VanBurenCharterTownshipMI.cs" />
+    <Compile Include="VassarMICity.cs" />
+    <Compile Include="VillageofDouglasMICity.cs" />
+    <Compile Include="WarrenMICity.cs" />
+    <Compile Include="WashingtonTownshipMI.cs" />
+    <Compile Include="WaterfordCharterTownshipMI.cs" />
+    <Compile Include="WatervlietMICity.cs" />
+    <Compile Include="WayneMICity.cs" />
+    <Compile Include="WestBloomfieldCharterTownshipMI.cs" />
+    <Compile Include="WestlandMICity.cs" />
+    <Compile Include="WindsorCharterTownshipMI.cs" />
+    <Compile Include="WyandotteMICity.cs" />
+    <Compile Include="WyomingMICity.cs" />
+    <Compile Include="YpsilantiCity.cs" />
+    <Compile Include="ZeelandMICity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scope.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

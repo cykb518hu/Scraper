@@ -1,0 +1,31 @@
+﻿I will provide a list of cities 
+
+Search Terms: search for terms “marijuana”, “marihuana,” “cannabis”, “moratorium”, and any of the previous terms within 5 words of the word “Ordinance”.   
+
+Timeframe: 1/1/2016 to present. 
+
+Search Locations:
+-City Council Meeting Agendas
+-City Council Meeting Minutes
+-City Planning Commission Agendas
+-City Planning Commission Agendas 
+-Board of Zoning Agendas 
+-Board of Zoning Minutes 
+(*NOTE - NOT ALL THESE DOCUMENTS ARE OCRed)
+
+-Keyword search on website homepage
+
+-Search internet news articles during the Timeframe that mention the Search Terms for the city.
+
+Output: Ultimately, I will want the results to be returned in a spreadsheet or database of some type:
+-Save a copy of the document that mentions any of the search terms with reference to the page number the search term appears (provide hyperlink to saved location).  
+-Provide page number of each mention of a Search Term in a document.
+-If possible, pull out each of the search terms with some context.  For example, the 10 words before or 10 words after.
+*Note - I will eventually want you to locate an Ordinance if there is a match, but we can discuss the details of this as this gets going.  
+
+-Realtime results: This process is ongoing.  When anything new appears in a Search Location, the Output must be updated with a result.  For example, if a search was done for the February 10 City Council Meeting minutes of a given city, results should be:
+-Search was conducted, and Search Term match.
+-Search was conducted, and no results were available (i.e. no document), or 
+-Search was conducted, and a document was available but the Search Terms did not appear.     
+
+-Calendar: A calendar should be part of the interface, that shows the dates of the future City Council, Planning, and zoning meetings in the cities I provide.  
