@@ -484,6 +484,7 @@
     <None Include="Config\client_secret.json" />
     <None Include="Config\debug.log" />
     <None Include="Config\KeyWord.json" />
+    <None Include="MI Municipalities.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
