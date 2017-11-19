@@ -95,6 +95,10 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PersianDateTime, Version=1.1.5082.36395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Selenium.WebDriverBackedSelenium">
       <HintPath>..\..\..\Software\SDKs\Selenium\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
@@ -159,7 +163,13 @@
     <Compile Include="AlgonacMICity.cs" />
     <Compile Include="AllenParkMICity.cs" />
     <Compile Include="AlmontVillageMI.cs" />
+    <Compile Include="TyroneCharterTownshipMI.cs" />
+    <Compile Include="CooperCharterTownshipMI.cs" />
+    <Compile Include="HamptonCharterTownshipMI.cs" />
+    <Compile Include="DaltonCharterTownshipMI.cs" />
+    <Compile Include="SpartaCharterTownshipMI.cs" />
     <Compile Include="AmherstTownMA.cs" />
+    <Compile Include="AlpenaCharterTownshipMI.cs" />
     <Compile Include="AnnArborCharterTownshipMI.cs" />
     <Compile Include="AnnArborMICity.cs" />
     <Compile Include="AuburnHillsMICity.cs" />
@@ -312,7 +322,13 @@
     <Content Include="Config\AlgonacMICity_Urls.txt" />
     <Content Include="Config\AllenParkMICity_Urls.txt" />
     <Content Include="Config\AlmontVillageMI_Urls.txt" />
+    <Content Include="Config\TyroneCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\CooperCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\HamptonCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\DaltonCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\SpartaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\AmherstTownMA_Urls.txt" />
+    <Content Include="Config\AlpenaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\AnnArborCharterTownshipMI_Urls.txt" />
     <Content Include="Config\AnnArborMICity_Urls.txt" />
     <Content Include="Config\AuburnHillsMICity_Urls.txt" />
