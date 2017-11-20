@@ -157,6 +157,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\ClayCharterTownshipMI.cs" />
     <Compile Include="ActonMACity.cs" />
     <Compile Include="AdrianMICity.cs" />
     <Compile Include="AgawamMACity.cs" />
@@ -317,6 +318,7 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\ClayCharterTownshipMI_Urls.txt" />
     <Content Include="Config\AdrianMICity_Urls.txt" />
     <Content Include="Config\AgawamMACity_Urls.txt" />
     <Content Include="Config\AlgonacMICity_Urls.txt" />
