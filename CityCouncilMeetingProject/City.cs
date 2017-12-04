@@ -131,7 +131,6 @@ namespace CityCouncilMeetingProject
             {
                 Console.WriteLine("This file already downloaded...");
             }
-
             if (fileType != "html")
             {
                 this.ReadText(false, localdoc.DocLocalPath, ref localdoc);
@@ -986,7 +985,7 @@ namespace CityCouncilMeetingProject
 
                 if(files.Count > 0)
                 {
-                    this.dtStartFrom = DateTime.Now.AddMonths(-2);
+                   // this.dtStartFrom = DateTime.Now.AddMonths(-2);
                 }
             }
         }

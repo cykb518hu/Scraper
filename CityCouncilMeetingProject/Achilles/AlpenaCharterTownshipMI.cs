@@ -39,6 +39,8 @@ namespace CityCouncilMeetingProject
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
+           // var docs = new List<Documents>();
+           // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
@@ -78,9 +80,12 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                  //  this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
+                   // Console.WriteLine(string.Format("url:{0},category:{1}", r.Attributes["href"].Value, subCategory));
+                    this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
+            Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
+           // Console.ReadKey();
         }
     }
 }

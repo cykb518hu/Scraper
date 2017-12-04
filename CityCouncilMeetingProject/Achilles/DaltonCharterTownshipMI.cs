@@ -37,11 +37,12 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
+           // var docs = new List<Documents>();
+            //var queries = new List<QueryResult>();
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
-            Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
             foreach (string url in this.docUrls)
             {
                 HtmlDocument doc = web.Load(url);
@@ -58,7 +59,7 @@ namespace CityCouncilMeetingProject
                         {
                             var dateStr = type.Substring(0, type.IndexOf("-"));
                             var category = type.Substring(type.IndexOf("-") + 1);
-                            category = category.Replace("-", "").Trim();
+                            category = category.Replace("-", "").Replace("Meeting.pdf", "").Trim();
                             DateTime meetingDate = DateTime.MinValue;
                            
                             bool dateConvert = false;
@@ -77,6 +78,7 @@ namespace CityCouncilMeetingProject
                                 Console.WriteLine("Early...");
                                 continue;
                             }
+                           // Console.WriteLine(string.Format("url:{0},category:{1}", docUrl, category));
                             this.ExtractADoc(c, docUrl, category, "pdf", meetingDate, ref docs, ref queries);
                         }
                     }
