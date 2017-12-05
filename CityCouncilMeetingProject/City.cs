@@ -191,7 +191,7 @@ namespace CityCouncilMeetingProject
 
             this.ExtractQueriesFromDoc(localdoc, ref qr);
             Console.WriteLine("{0} docs added, {1} queries added...", docs.Count, queries.Count);
-            this.SaveMeetingResultsToSQL(docs, queries);
+          //  this.SaveMeetingResultsToSQL(docs, queries);
         }
 
         private void DealWithFileName(ref string text)

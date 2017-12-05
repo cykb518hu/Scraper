@@ -38,7 +38,7 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-      
+
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
             WebClient c = new WebClient();
@@ -103,6 +103,7 @@ namespace CityCouncilMeetingProject
                 }
 
             }
+            Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
         }
     }
 }

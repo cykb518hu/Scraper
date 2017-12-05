@@ -70,6 +70,7 @@ namespace CityCouncilMeetingProject
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'documents/docs')]");
                 foreach (var r in list)
                 {
+                    r.
                     var dateStr = r.InnerText.Replace("\r", "").Replace("\n", "").Trim();
                     DateTime meetingDate = DateTime.MinValue;
                     bool dateConvert = false;
@@ -121,38 +122,6 @@ namespace CityCouncilMeetingProject
                     //this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
 
-                //if (category.Contains("pzc"))
-                //{
-                //    subCategory = "Planning Commission";
-                //}
-                //if (category.Contains("zba"))
-                //{
-                //    subCategory = "Zoning Board of Appeals";
-                //}
-                //if (category.Contains("bot"))
-                //{
-                //    subCategory = "Board of Trustees";
-                //}
-                //foreach (var r in list)
-                //{
-                //    DateTime meetingDate = DateTime.MinValue;
-                //    try
-                //    {
-                //        meetingDate = DateTime.ParseExact(r.InnerText.Replace("\r", "").Replace("\n", "").TrimEnd().TrimStart(), "MM-dd-yy", null);
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        Console.WriteLine("date format incorrect...");
-                //        continue;
-                //    }
-                //    if (meetingDate < this.dtStartFrom)
-                //    {
-                //        Console.WriteLine("Early...");
-                //        continue;
-                //    }
-                // var str = "http://www.hamptontownship.org/LinkClick.aspx?fileticket=77JEAWMuTn8%3d&tabid=3062&portalid=56&mid=6876";
-                //this.ExtractADoc(c, str, "ZOB", "pdf", DateTime.Now, ref docs, ref queries);
-                //}
             }
         }
     }

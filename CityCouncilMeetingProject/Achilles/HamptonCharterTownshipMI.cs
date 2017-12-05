@@ -38,51 +38,51 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-      
+
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
+            // var docs = new List<Documents>();
+            // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
-            Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
             foreach (string url in this.docUrls)
             {
                 var subUrl= url.Split('*')[1];
                 var category = url.Split('*')[0];
                 HtmlDocument doc = web.Load(subUrl);
-                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'/"+ category + "/')]");
-                //if (category.Contains("pzc"))
-                //{
-                //    subCategory = "Planning Commission";
-                //}
-                //if (category.Contains("zba"))
-                //{
-                //    subCategory = "Zoning Board of Appeals";
-                //}
-                //if (category.Contains("bot"))
-                //{
-                //    subCategory = "Board of Trustees";
-                //}
-                //foreach (var r in list)
-                //{
-                //    DateTime meetingDate = DateTime.MinValue;
-                //    try
-                //    {
-                //        meetingDate = DateTime.ParseExact(r.InnerText.Replace("\r", "").Replace("\n", "").TrimEnd().TrimStart(), "MM-dd-yy", null);
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        Console.WriteLine("date format incorrect...");
-                //        continue;
-                //    }
-                //    if (meetingDate < this.dtStartFrom)
-                //    {
-                //        Console.WriteLine("Early...");
-                //        continue;
-                //    }
-                var str = "http://www.hamptontownship.org/LinkClick.aspx?fileticket=77JEAWMuTn8%3d&tabid=3062&portalid=56&mid=6876";
-                 this.ExtractADoc(c, str, "ZOB", "pdf", DateTime.Now, ref docs, ref queries);
-                //}
+                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'LinkClick.aspx')]");
+                foreach (var r in list)
+                {
+
+                    string[] formats = { "MM-d-yy", "MM-dd-yy", "M-d-yy", "M-dd-yy" };
+                    var dateStr = r.InnerText.Replace("\r", "").Replace("\n", "").Trim();
+                    DateTime meetingDate = DateTime.MinValue;
+                    bool dateConvert = false;
+                    if (DateTime.TryParseExact(dateStr, formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
+                    {
+                        dateConvert = true;
+                    }
+                    if (!dateConvert)
+                    {
+                        Console.WriteLine("date formart incorrect");
+                        continue;
+                    }
+                    if (meetingDate < this.dtStartFrom)
+                    {
+                        Console.WriteLine("Early...");
+                        continue;
+                    }
+                    var link = this.cityEntity.CityUrl + r.Attributes["href"].Value;
+                    var data = c.DownloadData(link);
+                    var docType = "pdf";
+                    if (c.ResponseHeaders["Content-Type"].IndexOf("word") > -1)
+                    {
+                        docType = "doc";
+                    }
+                    this.ExtractADoc(c,  link, category, docType, meetingDate, ref docs, ref queries);
+                }
             }
+            Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
         }
     }
 }
