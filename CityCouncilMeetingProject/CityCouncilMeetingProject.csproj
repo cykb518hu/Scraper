@@ -157,6 +157,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\FlatRockMICity.cs" />
     <Compile Include="Achilles\PennfieldCharterTownshipMI.cs" />
     <Compile Include="ActonMACity.cs" />
     <Compile Include="Achilles\HowellMICity.cs" />
@@ -321,6 +322,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\Achilles\CharlotteMICityMI_Urls.txt" />
+    <Content Include="Config\Achilles\FlatRockMICity_Urls.txt" />
     <Content Include="Config\Achilles\HowellMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\PennfieldCharterTownshipMI_Urls.txt" />
     <Content Include="Config\AdrianMICity_Urls.txt" />
@@ -367,7 +369,6 @@
     <Content Include="Config\CommerceCharterTownshipMI_Urls.txt" />
     <Content Include="Config\CottrellvilleTownshipMI_Urls.txt" />
     <Content Include="Config\CrockeryTownshipMI_Urls.txt" />
-    <Content Include="Config\Achilles\DavisonMICity_Urls.txt" />
     <Content Include="Config\DavisonTownshipMI_Urls.txt" />
     <Content Include="Config\DearbornMICity_Urls.txt" />
     <Content Include="Config\DelhiCharterTownshipMI_Urls.txt" />

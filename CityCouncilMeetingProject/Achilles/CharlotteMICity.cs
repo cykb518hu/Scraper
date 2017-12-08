@@ -32,7 +32,7 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("CharlotteMICityMI_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("CharlotteMICity_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
