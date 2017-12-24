@@ -157,6 +157,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\RoscommonCharterTownshipMI.cs" />
+    <Compile Include="Achilles\CaledoniaCharterTownshipMI.cs" />
+    <Compile Include="Achilles\ErieCharterTownshipMI.cs" />
+    <Compile Include="Achilles\HadleyCharterTownshipMI.cs" />
+    <Compile Include="Achilles\NegauneeMICity.cs" />
+    <Compile Include="Achilles\HancockMICity.cs" />
+    <Compile Include="Achilles\GibraltarMICity.cs" />
+    <Compile Include="Achilles\HayesTownshipCharlevoixMI.cs" />
+    <Compile Include="Achilles\RossCharterTownshipMI.cs" />
+    <Compile Include="Achilles\RivesCharterTownshipMI.cs" />
     <Compile Include="Achilles\FlatRockMICity.cs" />
     <Compile Include="Achilles\PennfieldCharterTownshipMI.cs" />
     <Compile Include="ActonMACity.cs" />
@@ -321,6 +331,16 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\RoscommonCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\CaledoniaCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\ErieCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\HadleyCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\NegauneeMICity_Urls.txt" />
+    <Content Include="Config\Achilles\HancockMICity_Urls.txt" />
+    <Content Include="Config\Achilles\GibraltarMICity_Urls.txt" />
+    <Content Include="Config\Achilles\Hayes_Charlevoix_TownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\RossCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\RivesCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\CharlotteMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\FlatRockMICity_Urls.txt" />
     <Content Include="Config\Achilles\HowellMICityMI_Urls.txt" />
