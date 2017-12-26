@@ -9,17 +9,17 @@ using HtmlAgilityPack;
 
 namespace CityCouncilMeetingProject
 {
-    public class PerryCharterTownshipMI : City
+    public class LeeCharterTownshipMI : City
     {
         private List<string> docUrls = null;
 
-        public PerryCharterTownshipMI()
+        public LeeCharterTownshipMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "PerryCharterTownshipMI",
-                CityName = "Perry Charter Township",
-                CityUrl = "http://www.alpenatownship.com/",
+                CityId = "LeeCharterTownshipMI",
+                CityName = "Lee Charter Township",
+                CityUrl = "http://www.leetownship.org/",
                 StateCode = "MI"
             };
 
@@ -32,7 +32,7 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("PerryCharterTownshipMI_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("LeeCharterTownshipMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()

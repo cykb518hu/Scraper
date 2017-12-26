@@ -157,7 +157,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Achilles\PerryCharterTownshipMI.cs" />
+    <Compile Include="Achilles\CoopersvilleMICity.cs" />
+    <Compile Include="Achilles\LeeCharterTownshipMI.cs" />
     <Compile Include="Achilles\MillingtonCharterTownshipMI.cs" />
     <Compile Include="Achilles\RoscommonCharterTownshipMI.cs" />
     <Compile Include="Achilles\CaledoniaCharterTownshipMI.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="BloomfieldCharterTownshipMI.cs" />
     <Compile Include="BloomfieldHillsMICity.cs" />
     <Compile Include="BrandonTownshipMI.cs" />
+    <Compile Include="Achilles\WolverineLakeVillageMI.cs" />
     <Compile Include="BreedsvilleVillageMI.cs" />
     <Compile Include="BridgewaterTownshipMI.cs" />
     <Compile Include="BrightonCharterTownshipMI.cs" />
@@ -333,7 +335,8 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\Achilles\PerryCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\CoopersvilleMICity_Urls.txt" />
+    <Content Include="Config\Achilles\LeeCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\MillingtonCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\RoscommonCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\CaledoniaCharterTownshipMI_Urls.txt" />
@@ -374,6 +377,7 @@
     <Content Include="Config\BloomfieldHillsMICity_Urls.txt" />
     <Content Include="Config\BloomfiledHillsMICity_Urls.txt" />
     <Content Include="Config\BrandonTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\WolverineLakeVillageMI_Urls.txt" />
     <Content Include="Config\BreedsvilleVillageMI_Urls.txt" />
     <Content Include="Config\BridgewaterTownshipMI_Urls.txt" />
     <Content Include="Config\BrightonCharterTownshipMI_Urls.txt" />
