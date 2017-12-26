@@ -17,7 +17,7 @@ namespace CityCouncilMeetingProject
         {
             cityEntity = new CityInfo()
             {
-                CityId =",
+                CityId = "CoopersvilleMICity",
                 CityName = "Coopersville MI",
                 CityUrl = "http://www.cityofhancock.com/",
                 StateCode = "MI"
