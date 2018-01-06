@@ -1,1 +1,5 @@
 Council Meeting*https://www.wolverinelake.com/Pages/Village-Council.aspx
+Park and Recreation*https://www.wolverinelake.com//_api/Web/Lists(guid'f1bc58a7-feb4-48cb-9a94-78ffe3062939')/Items?$OrderBy=Year%20desc&$select=FileLeafRef,FileRef,Title,Board&$filter=Board%20eq%20%27Parks%20%26%20Recreation%20Board%27
+Warter Management*https://www.wolverinelake.com//_api/Web/Lists(guid'f1bc58a7-feb4-48cb-9a94-78ffe3062939')/Items?$OrderBy=Year%20desc&$select=FileLeafRef,FileRef,Title,Board,FileSizeDisplay&$filter=Board%20eq%20%27Water%20Management%20Board%27
+Zoning Board of Appeals*https://www.wolverinelake.com//_api/Web/Lists(guid'f1bc58a7-feb4-48cb-9a94-78ffe3062939')/Items?$OrderBy=Year%20desc&$select=FileLeafRef,FileRef,Title,Board,FileSizeDisplay&$filter=Board%20eq%20%27Zoning%20Board%20of%20Appeals%27
+Planning Commission*https://www.wolverinelake.com//_api/Web/Lists(guid'f1bc58a7-feb4-48cb-9a94-78ffe3062939')/Items?$OrderBy=Year%20desc&$select=FileLeafRef,FileRef,Title,Board&$filter=Board%20eq%20%27Planning%20Commission%27

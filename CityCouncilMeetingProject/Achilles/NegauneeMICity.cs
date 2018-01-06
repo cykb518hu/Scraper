@@ -43,22 +43,38 @@ namespace CityCouncilMeetingProject
            // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
-            Regex dateReg = new Regex("[0-9]{2}-[0-9]{2}-[0-9]{2}");
+         
             foreach (string url in this.docUrls)
             {
+                var subUrl = url.Split('*')[1];
+                var type = url.Split('*')[0];
                 var category = "";
-                HtmlDocument doc = web.Load(url);
-                var divNode= doc.DocumentNode.SelectSingleNode("//div[contains(@id,'panel-389-0-0-1')]");
+
+                HtmlDocument doc = web.Load(subUrl);
+                var divNode = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'panel-last-child')]");
                 HtmlNodeCollection list = divNode.SelectNodes(".//a[contains(@href,'.pdf')]");
                 foreach (var r in list)
                 {
-                    string meetingDateText = dateReg.Match(r.InnerText).ToString();
-                    DateTime meetingDate;
                     bool dateConvert = false;
-                    string[] formats = { "MM-dd-yy"};
-                    if (DateTime.TryParseExact(meetingDateText, formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
+                    DateTime meetingDate = DateTime.MinValue;
+                    if (type == "Meeting")
                     {
-                        dateConvert = true;
+                        Regex dateReg = new Regex("[0-9]{2}-[0-9]{2}-[0-9]{2}");
+                        string meetingDateText = dateReg.Match(r.InnerText).ToString();
+                        string[] formats = { "MM-dd-yy" };
+                        if (DateTime.TryParseExact(meetingDateText, formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
+                        {
+                            dateConvert = true;
+                        }
+                    }
+                    else
+                    {
+                        Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
+                        string meetingDateText = dateReg.Match(r.InnerText).ToString();
+                        if (DateTime.TryParse(meetingDateText, out meetingDate))
+                        {
+                            dateConvert = true;
+                        }
                     }
                     if (!dateConvert)
                     {
@@ -71,16 +87,25 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                    var tableId = r.ParentNode.ParentNode.ParentNode.Attributes["id"].Value.Split('-')[1];
-
-                    var span = doc.DocumentNode.SelectSingleNode("//span[contains(@id,'" + tableId + "')]");
-                    if (span != null)
+                    if (type == "Meeting")
                     {
-                        category = span.InnerText.Replace("\r", "").Replace("\n", "").Trim();
-                        category = System.Net.WebUtility.HtmlDecode(category);
+                        var tableId = r.ParentNode.ParentNode.ParentNode.Attributes["id"].Value.Split('-')[1];
+
+                        var span = doc.DocumentNode.SelectSingleNode("//span[contains(@id,'" + tableId + "')]");
+                        if (span != null)
+                        {
+                            category = span.InnerText.Replace("\r", "").Replace("\n", "").Trim();
+                            category = System.Net.WebUtility.HtmlDecode(category);
+                        }
                     }
-                   this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                    else
+                    {
+                        category = type;
+                    }
+
+                    this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
+
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
         }
