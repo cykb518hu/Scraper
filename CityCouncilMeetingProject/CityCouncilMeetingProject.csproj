@@ -157,9 +157,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\WaylandMICity.cs" />
+    <Compile Include="Achilles\EatonRapidsTownshipMI.cs" />
+    <Compile Include="Achilles\VergennesCharterTownshipMI.cs" />
+    <Compile Include="Achilles\MarineMICity.cs" />
+    <Compile Include="Achilles\MetamoraCharterTownshipMI.cs" />
+    <Compile Include="Achilles\PortSheldonCharterTownshipMI.cs" />
+    <Compile Include="Achilles\BradyCharterTownshipMI.cs" />
     <Compile Include="Achilles\CoopersvilleMICity.cs" />
     <Compile Include="Achilles\LeeCharterTownshipMI.cs" />
     <Compile Include="Achilles\MillingtonCharterTownshipMI.cs" />
+    <Compile Include="Achilles\MusseyCharterTownshipMI.cs" />
     <Compile Include="Achilles\RoscommonCharterTownshipMI.cs" />
     <Compile Include="Achilles\CaledoniaCharterTownshipMI.cs" />
     <Compile Include="Achilles\ErieCharterTownshipMI.cs" />
@@ -172,6 +180,7 @@
     <Compile Include="Achilles\RivesCharterTownshipMI.cs" />
     <Compile Include="Achilles\FlatRockMICity.cs" />
     <Compile Include="Achilles\PennfieldCharterTownshipMI.cs" />
+    <Compile Include="Achilles\SpartaVillageMI.cs" />
     <Compile Include="ActonMACity.cs" />
     <Compile Include="Achilles\HowellMICity.cs" />
     <Compile Include="AdrianMICity.cs" />
@@ -335,6 +344,14 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\EatonRapidsCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\WaylandMICity_Urls.txt" />
+    <Content Include="Config\Achilles\VergennesCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\MusseyCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\MarineMICity_Urls.txt" />
+    <Content Include="Config\Achilles\MetamoraCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\PortSheldonCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\BradyCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\CoopersvilleMICity_Urls.txt" />
     <Content Include="Config\Achilles\LeeCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\MillingtonCharterTownshipMI_Urls.txt" />
@@ -352,6 +369,7 @@
     <Content Include="Config\Achilles\FlatRockMICity_Urls.txt" />
     <Content Include="Config\Achilles\HowellMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\PennfieldCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\SpartaVillageMI_Urls.txt" />
     <Content Include="Config\AdrianMICity_Urls.txt" />
     <Content Include="Config\AgawamMACity_Urls.txt" />
     <Content Include="Config\AlgonacMICity_Urls.txt" />
