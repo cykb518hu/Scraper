@@ -157,6 +157,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\PorterCharterTownshipMI.cs" />
+    <Compile Include="Achilles\EastChinaCharterTownshipMI.cs" />
     <Compile Include="Achilles\LindenMICity.cs" />
     <Compile Include="Achilles\WaylandMICity.cs" />
     <Compile Include="Achilles\EatonRapidsTownshipMI.cs" />
@@ -345,6 +347,8 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\PorterCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\EastChinaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\LindenMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\EatonRapidsCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\WaylandMICity_Urls.txt" />
