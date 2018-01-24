@@ -1,0 +1,4 @@
+City Council*http://www.plainwell.org/Reference-Desk/Agendas-and-Minutes/City-Council/{0}.aspx
+Planning Commission*http://www.plainwell.org/Reference-Desk/Agendas-and-Minutes/Planning-Commission/{0}.aspx
+Parks and Trees*http://www.plainwell.org/Reference-Desk/Agendas-and-Minutes/Parks-and-Trees/{0}.aspx
+DDAT TIFA BRA*http://www.plainwell.org/Reference-Desk/Agendas-and-Minutes/DDA-TIFA-BRA/{0}.aspx
