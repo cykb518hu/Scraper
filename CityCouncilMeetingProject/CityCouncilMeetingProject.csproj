@@ -157,12 +157,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\ClayCharterTownshipMI.cs" />
+    <Compile Include="Achilles\ColumbusStClairTownshipMI.cs" />
+    <Compile Include="Achilles\EatonTownshipMI.cs" />
+    <Compile Include="Achilles\LathrupVillageMI.cs" />
     <Compile Include="Achilles\PlainwellMICity.cs" />
     <Compile Include="Achilles\PorterCharterTownshipMI.cs" />
     <Compile Include="Achilles\EastChinaCharterTownshipMI.cs" />
     <Compile Include="Achilles\LindenMICity.cs" />
     <Compile Include="Achilles\WaylandMICity.cs" />
-    <Compile Include="Achilles\EatonRapidsTownshipMI.cs" />
     <Compile Include="Achilles\VergennesCharterTownshipMI.cs" />
     <Compile Include="Achilles\MarineMICity.cs" />
     <Compile Include="Achilles\MetamoraCharterTownshipMI.cs" />
@@ -348,11 +351,15 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\ClayCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\ColumbusStClairTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\DavisonMICity_Urls.txt" />
+    <Content Include="Config\Achilles\EatonCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\LathrupVillageMI_Urls.txt" />
     <Content Include="Config\Achilles\PlainwellMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\PorterCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\EastChinaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\LindenMICityMI_Urls.txt" />
-    <Content Include="Config\Achilles\EatonRapidsCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\WaylandMICity_Urls.txt" />
     <Content Include="Config\Achilles\VergennesCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\MusseyCharterTownshipMI_Urls.txt" />

@@ -70,7 +70,6 @@ namespace CityCouncilMeetingProject
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'documents/docs')]");
                 foreach (var r in list)
                 {
-                    r.
                     var dateStr = r.InnerText.Replace("\r", "").Replace("\n", "").Trim();
                     DateTime meetingDate = DateTime.MinValue;
                     bool dateConvert = false;

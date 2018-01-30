@@ -9,17 +9,17 @@ using HtmlAgilityPack;
 
 namespace CityCouncilMeetingProject
 {
-    public class EatonRapidsTownshipMI : City
+    public class ColumbusStClairTownshipMI : City
     {
         private List<string> docUrls = null;
 
-        public EatonRapidsTownshipMI()
+        public ColumbusStClairTownshipMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "EatonRapidsTownshipMI",
-                CityName = "EatonRapids Charter Township",
-                CityUrl = "http://www.eatontownship.com/",
+                CityId = "ColumbusStClairTownshipMI",
+                CityName = "Columbus Charter Township",
+                CityUrl = "http://www.columbustwp.org/",
                 StateCode = "MI"
             };
 
@@ -32,7 +32,7 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("EatonRapidsCharterTownshipMI_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("ColumbusStClairTownshipMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
@@ -45,14 +45,17 @@ namespace CityCouncilMeetingProject
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
             dateRegFormatDic.Add(new Regex("[a-zA-Z]+ [\\s]{0,2}[0-9]{4}"), "MMMM yyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+. [\\s]{0,2}[0-9]{4}"), "MMM. yyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+.[\\s]{0,2}[0-9]{4}"), "MMM.yyyy");
+            dateRegFormatDic.Add(new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}"), "");
             foreach (string url in this.docUrls)
             {
                 var subUrl = url.Split('*')[1];
                 var category = url.Split('*')[0];
                 HtmlDocument doc = web.Load(subUrl);
-                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'/LinkClick.aspx?')]");
+                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'/wp-content/uploads/')]");
+                if(list==null)
+                {
+                    continue;
+                }
                 foreach (var r in list)
                 {
                     var dateConvert = false;
@@ -61,6 +64,14 @@ namespace CityCouncilMeetingProject
                     {
                         string format = dateRegFormatDic[dateRegKey];
                         string meetingDateText = dateRegKey.Match(r.InnerText).ToString();
+                        if (string.IsNullOrWhiteSpace(format))
+                        {
+                            if (DateTime.TryParse(meetingDateText, out meetingDate))
+                            {
+                                dateConvert = true;
+                                break;
+                            }
+                        }
                         if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
                         {
                             dateConvert = true;
@@ -80,8 +91,8 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                     //Console.WriteLine(string.Format("datestr:{0}", meetingDate.ToString("yyyy-MM-dd")));
-                     this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                     //Console.WriteLine(string.Format("datestr:{0},catetory", meetingDate.ToString("yyyy-MM-dd"), category));
+                     this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);

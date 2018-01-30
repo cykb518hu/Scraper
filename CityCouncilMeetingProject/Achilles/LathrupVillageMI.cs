@@ -6,19 +6,23 @@ using System.Text.RegularExpressions;
 using System.Net;
 using System.IO;
 using HtmlAgilityPack;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace CityCouncilMeetingProject
 {
-    public class WaylandMICity : City
+    public class LathrupVillageMI : City
     {
         private List<string> docUrls = null;
 
-        public WaylandMICity()
+        public LathrupVillageMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "WaylandMICity",
-                CityName = "Wayland MI",
+                CityId = "LathrupVillageMI",
+                CityName = "Lathrup",
                 CityUrl = "http://www.lathrupvillage.org/",
                 StateCode = "MI"
             };
@@ -32,7 +36,7 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("WaylandMICity_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("LathrupVillageMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
@@ -99,7 +103,7 @@ namespace CityCouncilMeetingProject
                                     break;
                                 }
                             }
-                           
+
                             if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
                             {
                                 dateConvert = true;
@@ -122,8 +126,8 @@ namespace CityCouncilMeetingProject
                     }
                     HtmlNode categoryNode = Closest(r);
                     category = categoryNode.InnerText.Replace("\r", "").Replace("\n", "").TrimEnd().TrimStart();
-                    
-                    if(category.IndexOf("City Council")>-1)
+
+                    if (category.IndexOf("City Council") > -1)
                     {
                         category = "City Council";
                     }
@@ -166,5 +170,7 @@ namespace CityCouncilMeetingProject
             }
             return null;
         }
+
     }
+
 }
