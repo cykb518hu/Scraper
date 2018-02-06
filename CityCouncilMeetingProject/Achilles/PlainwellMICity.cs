@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "PlainwellMICity",
                 CityName = "Plainwell MI",
-                CityUrl = "http://www.flatrockmi.org",
+                CityUrl = "http://www.plainwell.org/",
                 StateCode = "MI"
             };
 
@@ -37,10 +37,10 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-            //var docs = this.LoadDocumentsDoneSQL();
-            //var queries = this.LoadQueriesDoneSQL();
-             var docs = new List<Documents>();
-            var queries = new List<QueryResult>();
+            var docs = this.LoadDocumentsDoneSQL();
+            var queries = this.LoadQueriesDoneSQL();
+            // var docs = new List<Documents>();
+            //var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
@@ -88,8 +88,8 @@ namespace CityCouncilMeetingProject
                             Console.WriteLine("Early...");
                             continue;
                         }
-                        Console.WriteLine(string.Format("url:{0},category:{1},date:{2}", r.Attributes["href"].Value, category, meetingDate.ToString("yyyy-MM-dd")));
-                       // this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                       // Console.WriteLine(string.Format("url:{0},category:{1},date:{2}", r.Attributes["href"].Value, category, meetingDate.ToString("yyyy-MM-dd")));
+                        this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                     }
 
                 }

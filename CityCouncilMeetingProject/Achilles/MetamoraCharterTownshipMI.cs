@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "MetamoraCharterTownshipMI",
                 CityName = "Metamora Charter Township",
-                CityUrl = "http://www.alpenatownship.com/",
+                CityUrl = "http://metamoratownship.com",
                 StateCode = "MI"
             };
 
@@ -39,8 +39,8 @@ namespace CityCouncilMeetingProject
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-           // var docs = new List<Documents>();
-           // var queries = new List<QueryResult>();
+            //var docs = new List<Documents>();
+            //var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
            
@@ -67,8 +67,8 @@ namespace CityCouncilMeetingProject
                         continue;
                     }
                     subCategory = CategoryStr(r);
-                    Console.WriteLine(string.Format("date:{0},category:{1}", meetingDateText, subCategory));
-                    //this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
+                   // Console.WriteLine(string.Format("date:{0},category:{1}", meetingDateText, subCategory));
+                    this.ExtractADoc(c, r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
@@ -116,9 +116,9 @@ namespace CityCouncilMeetingProject
             }
             if (item != null)
             {
-                result = item.FirstChild.InnerText;
+                result = item.FirstChild.NextSibling.InnerText;
             }
-            return result;
+            return result.Replace("&nbsp;","").Trim();
         }
     }
 }

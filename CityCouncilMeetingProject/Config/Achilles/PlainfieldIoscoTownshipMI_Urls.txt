@@ -1,0 +1,4 @@
+Township Board*http://www.plainfieldtwpmi.com/ptboard.php
+Planning Board*http://www.plainfieldtwpmi.com/planningboard.php
+Recreation Board*http://www.plainfieldtwpmi.com/recboard.php
+Historical Commission*http://www.plainfieldtwpmi.com/historical.php

@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "CoopersvilleMICity",
                 CityName = "Coopersville MI",
-                CityUrl = "http://www.cityofhancock.com/",
+                CityUrl = "http://www.cityofcoopersville.com/",
                 StateCode = "MI"
             };
 

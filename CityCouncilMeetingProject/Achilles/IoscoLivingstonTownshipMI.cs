@@ -9,17 +9,17 @@ using HtmlAgilityPack;
 
 namespace CityCouncilMeetingProject
 {
-    public class PorterCharterTownshipMI : City
+    public class IoscoLivingstonTownshipMI : City
     {
         private List<string> docUrls = null;
 
-        public PorterCharterTownshipMI()
+        public IoscoLivingstonTownshipMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "PorterCharterTownshipMI",
-                CityName = "Porter Charter Township",
-                CityUrl = "http://www.portertownship.org",
+                CityId = "IoscoLivingstonTownshipMI",
+                CityName = "Iosco Charter Township",
+                CityUrl = "http://www.ioscotwp.com/",
                 StateCode = "MI"
             };
 
@@ -32,25 +32,28 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("PorterCharterTownshipMI_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("IoscoLivingstonTownshipMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
         {
-            var docs = this.LoadDocumentsDoneSQL();
-            var queries = this.LoadQueriesDoneSQL();
-            //var docs = new List<Documents>();
-            //var queries = new List<QueryResult>();
+            //var docs = this.LoadDocumentsDoneSQL();
+            //var queries = this.LoadQueriesDoneSQL();
+            var docs = new List<Documents>();
+            var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
-            dateRegFormatDic.Add(new Regex("[0-9]{6}"), "yyMMdd");
-            dateRegFormatDic.Add(new Regex("[0-9]{4}"), "yyMM");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}/[0-9]{2}/[0-9]{4}"), "MM/dd/yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}/[0-9]{1}/[0-9]{4}"), "MM/d/yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{1}/[0-9]{2}/[0-9]{4}"), "M/dd/yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}/[0-9]{2}/[0-9]{2}"), "MM/dd/yy");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}/[0-9]{1}/[0-9]{2}"), "MM/d/yy");
+            dateRegFormatDic.Add(new Regex("[0-9]{1}/[0-9]{2}/[0-9]{2}"), "M/dd/yy");
             foreach (string url in this.docUrls)
             {
-                var subUrl = url.Split('*')[1];
-                var category = url.Split('*')[0];
-                HtmlDocument doc = web.Load(subUrl);
+                var category = "Township Board";
+                HtmlDocument doc = web.Load(url);
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'.pdf')]");
                 foreach (var r in list)
                 {
@@ -59,7 +62,7 @@ namespace CityCouncilMeetingProject
                     foreach (var dateRegKey in dateRegFormatDic.Keys)
                     {
                         string format = dateRegFormatDic[dateRegKey];
-                        string meetingDateText = dateRegKey.Match(r.Attributes["href"].Value).ToString();
+                        string meetingDateText = dateRegKey.Match(r.InnerText).ToString();
                         if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
                         {
                             dateConvert = true;
@@ -69,7 +72,7 @@ namespace CityCouncilMeetingProject
                     }
                     if (!dateConvert)
                     {
-                        Console.WriteLine(r.Attributes["href"].Value);
+                        Console.WriteLine(r.InnerText);
                         Console.WriteLine("date format incorrect...");
                         continue;
                     }
@@ -79,8 +82,8 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                    //Console.WriteLine(string.Format("category:{0},datetime:{1}",  category, meetingDate.ToString("yyyy-MM-dd")));
-                    this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                    Console.WriteLine(string.Format("date:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
+                   // this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);

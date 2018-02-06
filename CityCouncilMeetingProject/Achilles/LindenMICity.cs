@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "LindenMICity",
                 CityName = "Linden MI",
-                CityUrl = "www.lindenmi.us",
+                CityUrl = "http://www.lindenmi.us",
                 StateCode = "MI"
             };
 

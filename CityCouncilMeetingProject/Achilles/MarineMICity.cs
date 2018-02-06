@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "MarineMICity",
                 CityName = "Marine MI",
-                CityUrl = "http://www.flatrockmi.org",
+                CityUrl = "https://cityofmarinecity.org",
                 StateCode = "MI"
             };
 
@@ -39,7 +39,7 @@ namespace CityCouncilMeetingProject
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-            // var docs = new List<Documents>();
+             //var docs = new List<Documents>();
              //var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();

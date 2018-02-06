@@ -39,6 +39,8 @@ namespace CityCouncilMeetingProject
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
+            //var docs = new List<Documents>();
+           // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2}");
