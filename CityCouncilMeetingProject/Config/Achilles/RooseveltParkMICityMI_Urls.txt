@@ -1,0 +1,3 @@
+City Meeting*http://rooseveltpark.org/council/meeting-minutes-2018/archive/minutes-{0}/
+City Meeting*http://rooseveltpark.org/council/meeting-minutes-2018/
+Meeting Agenda*http://rooseveltpark.org/council/meeting-agenda/

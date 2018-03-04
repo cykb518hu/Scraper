@@ -50,9 +50,13 @@ namespace CityCouncilMeetingProject
             {
                 var subUrl = url.Split('*')[1];
                 var category = url.Split('*')[0];
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
-                HtmlDocument doc = web.Load(subUrl);
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+                var data = new MyWebClient().DownloadString(subUrl);
+                var doc = new HtmlDocument();
+                doc.LoadHtml(data);
+
+               // HtmlDocument doc = web.Load(subUrl);
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'/webapp/GetFile?fid=')]");
                 foreach (var r in list)
                 {
@@ -94,5 +98,19 @@ namespace CityCouncilMeetingProject
            // Console.ReadKey();
         }
 
+    }
+
+    class MyWebClient : WebClient
+    {
+        protected override WebRequest GetWebRequest(Uri address)
+        {
+            HttpWebRequest request = base.GetWebRequest(address) as HttpWebRequest;
+            
+            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0";
+            request.Headers.Add("Accept-Language", "zh-cn,en-us;q=0.8,zh-hk;q=0.6,ja;q=0.4,zh;q=0.2");
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
+            return request;
+        }
     }
 }

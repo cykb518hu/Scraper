@@ -6,20 +6,22 @@ using System.Text.RegularExpressions;
 using System.Net;
 using System.IO;
 using HtmlAgilityPack;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace CityCouncilMeetingProject
 {
-    public class CoopersvilleMICity : City
+    public class WoodhullCharterTownshipMI : City
     {
         private List<string> docUrls = null;
 
-        public CoopersvilleMICity()
+        public WoodhullCharterTownshipMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "CoopersvilleMICity",
-                CityName = "Coopersville MI",
-                CityUrl = "http://www.cityofcoopersville.com",
+                CityId = "WoodhullCharterTownshipMI",
+                CityName = "Woodhull Charter Township",
+                CityUrl = "http://www.woodhulltwp.org",
                 StateCode = "MI"
             };
 
@@ -32,24 +34,24 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("CoopersvilleMICity_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("WoodhullCharterTownshipMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-          //var docs = new List<Documents>();
-          //  var queries = new List<QueryResult>();
+            // var docs = new List<Documents>();
+            //var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
-            Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
+            Regex dateReg = new Regex("[A-Za-z]+[\\s]{0,1}[0-9]{1,2},[\\s]{0,1}[0-9]{4}");
             foreach (string url in this.docUrls)
             {
                 var subUrl = url.Split('*')[1];
                 var category = url.Split('*')[0];
                 HtmlDocument doc = web.Load(subUrl);
-                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'.pdf')]");
+                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'/LinkClick.aspx?')]");
                 foreach (var r in list)
                 {
                     string meetingDateText = dateReg.Match(r.InnerText).ToString();
@@ -65,10 +67,15 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                    this.ExtractADoc(c, this.cityEntity.CityUrl+ r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                    //Console.WriteLine(string.Format("url:{0},category:{1}", r.Attributes["href"].Value, category));
+                    this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
+
         }
+
     }
+
+
 }

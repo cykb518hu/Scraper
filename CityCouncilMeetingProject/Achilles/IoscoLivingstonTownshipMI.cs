@@ -37,10 +37,10 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-            //var docs = this.LoadDocumentsDoneSQL();
-            //var queries = this.LoadQueriesDoneSQL();
-            var docs = new List<Documents>();
-            var queries = new List<QueryResult>();
+            var docs = this.LoadDocumentsDoneSQL();
+            var queries = this.LoadQueriesDoneSQL();
+           // var docs = new List<Documents>();
+           // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
@@ -52,8 +52,9 @@ namespace CityCouncilMeetingProject
             dateRegFormatDic.Add(new Regex("[0-9]{1}/[0-9]{2}/[0-9]{2}"), "M/dd/yy");
             foreach (string url in this.docUrls)
             {
-                var category = "Township Board";
-                HtmlDocument doc = web.Load(url);
+                var subUrl = url.Split('*')[1];
+                var category = url.Split('*')[0];
+                HtmlDocument doc = web.Load(subUrl);
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'.pdf')]");
                 foreach (var r in list)
                 {
@@ -82,8 +83,8 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                    Console.WriteLine(string.Format("date:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
-                   // this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, subCategory, "pdf", meetingDate, ref docs, ref queries);
+                  //  Console.WriteLine(string.Format("date:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
+                   this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);

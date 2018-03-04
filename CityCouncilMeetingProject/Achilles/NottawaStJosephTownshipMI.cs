@@ -9,17 +9,17 @@ using HtmlAgilityPack;
 
 namespace CityCouncilMeetingProject
 {
-    public class CoopersvilleMICity : City
+    public class NottawaStJosephTownshipMI : City
     {
         private List<string> docUrls = null;
 
-        public CoopersvilleMICity()
+        public NottawaStJosephTownshipMI()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "CoopersvilleMICity",
-                CityName = "Coopersville MI",
-                CityUrl = "http://www.cityofcoopersville.com",
+                CityId = "NottawaStJosephTownshipMI",
+                CityName = "Nottawa Charter Township",
+                CityUrl = "http://www.nottawatownship.org/",
                 StateCode = "MI"
             };
 
@@ -32,18 +32,19 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("CoopersvilleMICity_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("NottawaStJosephTownshipMI_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-          //var docs = new List<Documents>();
-          //  var queries = new List<QueryResult>();
+            // var docs = new List<Documents>();
+            // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
-            Regex dateReg = new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{1,2},[\\s]{0,2}[0-9]{4}");
+            Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
+            dateRegFormatDic.Add(new Regex("[a-zA-Z]+ [\\s]{0,2}[0-9]{4}"), "MMMM yyyy");
             foreach (string url in this.docUrls)
             {
                 var subUrl = url.Split('*')[1];
@@ -52,23 +53,37 @@ namespace CityCouncilMeetingProject
                 HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'.pdf')]");
                 foreach (var r in list)
                 {
-                    string meetingDateText = dateReg.Match(r.InnerText).ToString();
-                    DateTime meetingDate;
-                    if (!DateTime.TryParse(meetingDateText, out meetingDate))
+                    var dateConvert = false;
+                    DateTime meetingDate = DateTime.MinValue;
+                    foreach (var dateRegKey in dateRegFormatDic.Keys)
+                    {
+                        string format = dateRegFormatDic[dateRegKey];
+                        string meetingDateText = dateRegKey.Match(r.InnerText).ToString();
+                        if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
+                        {
+                            dateConvert = true;
+                            break;
+                        }
+
+                    }
+                    if (!dateConvert)
                     {
                         Console.WriteLine(r.InnerText);
                         Console.WriteLine("date format incorrect...");
                         continue;
                     }
+
                     if (meetingDate < this.dtStartFrom)
                     {
                         Console.WriteLine("Early...");
                         continue;
                     }
-                    this.ExtractADoc(c, this.cityEntity.CityUrl+ r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
+                   //  Console.WriteLine(string.Format("datestr:{0}", meetingDate.ToString("yyyy-MM-dd")));
+                     this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
+            // Console.ReadKey();
         }
     }
 }
