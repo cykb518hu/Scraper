@@ -157,6 +157,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\MiltonAntrimTownshipMI.cs" />
+    <Compile Include="Achilles\MiltonCassTownshipMI.cs" />
     <Compile Include="Achilles\OneidaCharterTownshipMI.cs" />
     <Compile Include="Achilles\NottawaIsabellaTownshipMI.cs" />
     <Compile Include="Achilles\NottawaStJosephTownshipMI.cs" />
@@ -359,6 +361,8 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\MiltonAntrimTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\MiltonCassTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\OneidaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\NottawaIsabellaTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\NottawaStJosephTownshipMI_Urls.txt" />
