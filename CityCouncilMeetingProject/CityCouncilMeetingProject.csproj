@@ -162,6 +162,7 @@
     <Compile Include="Achilles\OneidaCharterTownshipMI.cs" />
     <Compile Include="Achilles\NottawaIsabellaTownshipMI.cs" />
     <Compile Include="Achilles\NottawaStJosephTownshipMI.cs" />
+    <Compile Include="Achilles\PortlandMICity.cs" />
     <Compile Include="Achilles\RooseveltParkMICity.cs" />
     <Compile Include="Achilles\WoodhullCharterTownshipMI.cs" />
     <Compile Include="Achilles\ClayCharterTownshipMI.cs" />
@@ -366,6 +367,7 @@
     <Content Include="Config\Achilles\OneidaCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\NottawaIsabellaTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\NottawaStJosephTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\PortlandMICity_Urls.txt" />
     <Content Include="Config\Achilles\RooseveltParkMICityMI_Urls.txt" />
     <Content Include="Config\Achilles\WoodhullCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\ClayCharterTownshipMI_Urls.txt" />

@@ -18,7 +18,7 @@ namespace CityCouncilMeetingProject
             cityEntity = new CityInfo()
             {
                 CityId = "ColumbusStClairTownshipMI",
-                CityName = "Columbus Charter Township",
+                CityName = "Columbus-StClair Charter Township",
                 CityUrl = "http://www.columbustwp.org/",
                 StateCode = "MI"
             };
@@ -39,7 +39,7 @@ namespace CityCouncilMeetingProject
         {
             var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-            // var docs = new List<Documents>();
+             //var docs = new List<Documents>();
             // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
@@ -91,7 +91,7 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                     //Console.WriteLine(string.Format("datestr:{0},catetory", meetingDate.ToString("yyyy-MM-dd"), category));
+                    // Console.WriteLine(string.Format("datestr:{0},catetory", meetingDate.ToString("yyyy-MM-dd"), category));
                      this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
