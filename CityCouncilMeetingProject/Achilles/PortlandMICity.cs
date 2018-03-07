@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "PortlandMICity",
                 CityName = "Portland MI",
-                CityUrl = "https://cityofmarinecity.org",
+                CityUrl = "http://www.portland-michigan.org",
                 StateCode = "MI"
             };
 
@@ -37,10 +37,10 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-            var docs = this.LoadDocumentsDoneSQL();
+           var docs = this.LoadDocumentsDoneSQL();
             var queries = this.LoadQueriesDoneSQL();
-             //var docs = new List<Documents>();
-             //var queries = new List<QueryResult>();
+            // var docs = new List<Documents>();
+            // var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Regex dateReg = new Regex("[A-Za-z]+[\\s]{0,1}[0-9]{1,2},[\\s]{0,1}[0-9]{4}");
@@ -48,42 +48,60 @@ namespace CityCouncilMeetingProject
 
             foreach (string url in this.docUrls)
             {
-                HtmlDocument doc = web.Load(url);
-                HtmlNodeCollection sectionNodes = doc.DocumentNode.SelectNodes("//section");
-                if (sectionNodes != null)
+                var subUrl = url.Split('*')[1];
+                var category = url.Split('*')[0];
+                HtmlDocument doc = web.Load(subUrl);
+
+                HtmlNodeCollection urlList = doc.DocumentNode.SelectNodes(".//a[contains(@href,'/DocumentCenter/View/')]");
+                if (urlList == null)
                 {
-                    foreach (HtmlNode section in sectionNodes)
+                    continue;
+                }
+                string meetingDateText = "";
+              
+                foreach (var r in urlList)
+                {
+                    if (category == "City Council")
                     {
-                        HtmlNodeCollection urlList = section.SelectNodes(".//a[contains(@href,'/wp-content/uploads/')]");
-                        if (urlList == null)
-                        {
-                            continue;
-                        }
-                        foreach (var r in urlList)
-                        {
-                            string meetingDateText = dateReg.Match(r.InnerText).ToString();
-
-                            DateTime meetingDate;
-                            if (!DateTime.TryParse(meetingDateText, out meetingDate))
-                            {
-                                Console.WriteLine(meetingDateText);
-                                Console.WriteLine("date format incorrect...");
-                                continue;
-                            }
-                            if (meetingDate < this.dtStartFrom)
-                            {
-                                Console.WriteLine("Early...");
-                                continue;
-                            }
-                            var category = section.Attributes["id"].Value;
-                            //Console.WriteLine(string.Format("meeting date :{0},category:{1}", meetingDateText, section.Attributes["id"].Value));
-                            this.ExtractADoc(c, r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
-                        }
-
+                        meetingDateText = GetDate(r, subUrl);
                     }
+                    else
+                    {
+                        meetingDateText = dateReg.Match(r.InnerText).ToString();
+                    }
+                    DateTime meetingDate;
+                    if (!DateTime.TryParse(meetingDateText, out meetingDate))
+                    {
+                        Console.WriteLine(meetingDateText);
+                        Console.WriteLine("date format incorrect...");
+                        continue;
+                    }
+                    if (meetingDate < this.dtStartFrom)
+                    {
+                        Console.WriteLine("Early...");
+                        continue;
+                    }
+
+                    // Console.WriteLine(string.Format("meeting date :{0},category:{1}", meetingDateText, category));
+                    this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
+
+        }
+
+        public string GetDate(HtmlNode node,string url)
+        {
+            var dateStr = node.ParentNode.ParentNode.FirstChild.NextSibling.InnerText;
+            if(!string.IsNullOrWhiteSpace(dateStr))
+            {
+                dateStr = dateStr.Replace("Special Meeting", "").Replace("Budget Workshop", "").Replace("Goal Session", "").Replace("-", "").Trim();
+                dateStr = dateStr.Substring(0, dateStr.Length - 2);
+            }
+
+            var year = url.Substring(url.LastIndexOf("/") + 1, 4);
+
+            return dateStr + ", " + year;
 
         }
     }
