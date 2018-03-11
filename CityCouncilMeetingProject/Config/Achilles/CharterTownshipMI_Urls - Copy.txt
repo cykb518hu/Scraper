@@ -1,0 +1,3 @@
+pzc_minutes*http://www.alpenatownship.com/documents.html
+zba_minutes*http://www.alpenatownship.com/documents.html
+bot_minutes*http://www.alpenatownship.com/documents.html

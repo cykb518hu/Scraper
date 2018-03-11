@@ -157,7 +157,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Achilles\YankeeSpringsCharterTownshipMI.cs" />
+    <Compile Include="Achilles\LeeAlleganTownshipMI.cs" />
+    <Compile Include="Achilles\HomerMidlandTownshipMI.cs" />
+    <Compile Include="Achilles\RutlandCharterTownshipMI.cs" />
+    <Compile Include="Achilles\SouthHavenVanBurenCharterTownshipMI.cs" />
     <Compile Include="Achilles\BloomerCharterTownshipMI.cs" />
+    <Compile Include="Achilles\BlissfieldCharterTownshipMI.cs" />
+    <Compile Include="Achilles\SpencerCharterTownshipMI.cs" />
     <Compile Include="Achilles\EurekaMontcalmCharterTownshipMI.cs" />
     <Compile Include="Achilles\OtsegoMICity.cs" />
     <Compile Include="Achilles\StockbridgeCharterTownshipMI.cs" />
@@ -367,6 +374,14 @@
     <Compile Include="ZeelandMICity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Achilles\YankeeSpringsCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\LeeAlleganCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\HomerMidlandCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\RutlandCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\CharterTownshipMI_Urls - Copy.txt" />
+    <Content Include="Config\Achilles\SouthHavenVanBurenCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\BlissfieldCharterTownshipMI_Urls.txt" />
+    <Content Include="Config\Achilles\SpencerCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\BloomerCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\EurekaMontcalmCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\OtsegoMICity_Urls.txt" />

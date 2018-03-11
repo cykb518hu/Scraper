@@ -19,7 +19,7 @@ namespace CityCouncilMeetingProject
             {
                 CityId = "EatonTownshipMI",
                 CityName = "Eaton Charter Township",
-                CityUrl = "http://www.eatontownship.com/",
+                CityUrl = "http://www.eatontownship.com",
                 StateCode = "MI"
             };
 
@@ -37,16 +37,16 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-            var docs = this.LoadDocumentsDoneSQL();
-            var queries = this.LoadQueriesDoneSQL();
-            // var docs = new List<Documents>();
-            // var queries = new List<QueryResult>();
+           // var docs = this.LoadDocumentsDoneSQL();
+           // var queries = this.LoadQueriesDoneSQL();
+             var docs = new List<Documents>();
+             var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
             dateRegFormatDic.Add(new Regex("[a-zA-Z]+ [\\s]{0,2}[0-9]{4}"), "MMMM yyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+. [\\s]{0,2}[0-9]{4}"), "MMM. yyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+.[\\s]{0,2}[0-9]{4}"), "MMM.yyyy");
+            dateRegFormatDic.Add(new Regex("[a-zA-Z]+[\\s]{0,2}[0-9]{4}"), "MMM yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{4}"), "yyyy");
             foreach (string url in this.docUrls)
             {
                 var subUrl = url.Split('*')[1];
@@ -56,11 +56,12 @@ namespace CityCouncilMeetingProject
                 foreach (var r in list)
                 {
                     var dateConvert = false;
+                    var dateStr = r.InnerText.Replace(".", "").Replace("  ", "");
                     DateTime meetingDate = DateTime.MinValue;
                     foreach (var dateRegKey in dateRegFormatDic.Keys)
                     {
                         string format = dateRegFormatDic[dateRegKey];
-                        string meetingDateText = dateRegKey.Match(r.InnerText).ToString();
+                        string meetingDateText = dateRegKey.Match(dateStr).ToString();
                         if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
                         {
                             dateConvert = true;
@@ -70,7 +71,7 @@ namespace CityCouncilMeetingProject
                     }
                     if (!dateConvert)
                     {
-                        Console.WriteLine(r.InnerText);
+                        Console.WriteLine(dateStr);
                         Console.WriteLine("date format incorrect...");
                         continue;
                     }
@@ -80,7 +81,7 @@ namespace CityCouncilMeetingProject
                         Console.WriteLine("Early...");
                         continue;
                     }
-                     //Console.WriteLine(string.Format("datestr:{0}", meetingDate.ToString("yyyy-MM-dd")));
+                   // Console.WriteLine(string.Format("datestr:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
                      this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
