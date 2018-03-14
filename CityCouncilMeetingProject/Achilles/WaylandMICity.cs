@@ -37,69 +37,29 @@ namespace CityCouncilMeetingProject
 
         public void DownloadCouncilPdfFiles()
         {
-            var docs = this.LoadDocumentsDoneSQL();
-            var queries = this.LoadQueriesDoneSQL();
-            // var docs = new List<Documents>();
-            // var queries = new List<QueryResult>();
+            //var docs = this.LoadDocumentsDoneSQL();
+           //var queries = this.LoadQueriesDoneSQL();
+             var docs = new List<Documents>();
+             var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
-            dateRegFormatDic.Add(new Regex("[A-Za-z]+[\\s]{0,1}[0-9]{1,2},[\\s]{0,1}[0-9]{4}"), "");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+ [\\s]{0,2}[0-9]{4}"), "MMMM yyyy");
-            dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{2}-[0-9]{2}"), "MM-dd-yy");
-            dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{1}-[0-9]{2}"), "MM-d-yy");
-            dateRegFormatDic.Add(new Regex("[0-9]{1}-[0-9]{2}-[0-9]{2}"), "M-dd-yy");
-            dateRegFormatDic.Add(new Regex("[0-9]{1}-[0-9]{1}-[0-9]{2}"), "M-d-yy");
-            dateRegFormatDic.Add(new Regex("[0-9]{8}"), "MMddyyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+. [0-9]{2} [\\s]{0,2}[0-9]{4}"), "MMM dd yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{2}-[0-9]{4}"), "MM-dd-yyyy");
             foreach (string url in this.docUrls)
             {
                 var category = "";
                 HtmlDocument doc = web.Load(url);
-                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//a[contains(@href,'.pdf')]");
-                foreach (var r in list)
+                HtmlNodeCollection list = doc.DocumentNode.SelectNodes("//option");
+                if (list != null)
                 {
-                    if (r.FirstChild.Name == "img")
+                    foreach (var r in list)
                     {
-                        continue;
-                    }
-                    var dateConvert = false;
-                    DateTime meetingDate = DateTime.MinValue;
-                    foreach (var dateRegKey in dateRegFormatDic.Keys)
-                    {
-                        string format = dateRegFormatDic[dateRegKey];
-                        string meetingDateText = dateRegKey.Match(r.InnerText).ToString();
-                        if (string.IsNullOrEmpty(format))
-                        {
-                            if (DateTime.TryParse(meetingDateText, out meetingDate))
-                            {
-                                dateConvert = true;
-                                break;
-                            }
-                        }
-                        if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
-                        {
-                            dateConvert = true;
-                            break;
-                        }
-
-                    }
-                    if (!dateConvert)
-                    {
+                        var dateConvert = false;
+                        DateTime meetingDate = DateTime.MinValue;
                         foreach (var dateRegKey in dateRegFormatDic.Keys)
                         {
-
                             string format = dateRegFormatDic[dateRegKey];
-                            string meetingDateText = dateRegKey.Match(r.ParentNode.NextSibling.NextSibling.InnerText).ToString();
-                            if (string.IsNullOrEmpty(format))
-                            {
-                                if (DateTime.TryParse(meetingDateText, out meetingDate))
-                                {
-                                    dateConvert = true;
-                                    break;
-                                }
-                            }
-                           
+                            string meetingDateText = dateRegKey.Match(r.NextSibling.InnerText).ToString();
                             if (DateTime.TryParseExact(meetingDateText, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out meetingDate))
                             {
                                 dateConvert = true;
@@ -107,64 +67,53 @@ namespace CityCouncilMeetingProject
                             }
 
                         }
-                    }
-                    if (!dateConvert)
-                    {
-                        Console.WriteLine(r.InnerText);
-                        Console.WriteLine("date format incorrect...");
-                        continue;
-                    }
+                        if (!dateConvert)
+                        {
+                            Console.WriteLine(r.NextSibling.InnerText);
+                            Console.WriteLine("date format incorrect...");
+                            continue;
+                        }
+                        if (meetingDate < this.dtStartFrom)
+                        {
+                            Console.WriteLine("Early...");
+                            continue;
+                        }
+                        category = GetCategory(r);
+                        if (category.IndexOf("City Council") > -1)
+                        {
+                            category = "City Council";
+                        }
+                        if (category.IndexOf("CC") > -1)
+                        {
+                            category = "City Council";
+                        }
+                        if (category.IndexOf("Planning") > -1)
+                        {
+                            category = "Planning Commission";
+                        }
+                        //var url=string.Format("{}")
+                        //Console.WriteLine(string.Format("datestr:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
+                        this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
 
-                    if (meetingDate < this.dtStartFrom)
-                    {
-                        Console.WriteLine("Early...");
-                        continue;
                     }
-                    HtmlNode categoryNode = Closest(r);
-                    category = categoryNode.InnerText.Replace("\r", "").Replace("\n", "").TrimEnd().TrimStart();
-                    
-                    if(category.IndexOf("City Council")>-1)
-                    {
-                        category = "City Council";
-                    }
-                    if (category.IndexOf("Planning") > -1)
-                    {
-                        category = "Planning Commission";
-                    }
-                    if (category.IndexOf("Downtown") > -1)
-                    {
-                        category = "Downtown Development";
-                    }
-                    if (category.IndexOf("ZBA") > -1)
-                    {
-                        category = "Zoning Board of Appeals";
-                    }
-                    //Console.WriteLine(string.Format("datestr:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
-                    this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }
             Console.WriteLine("docs:" + docs.Count + "--- query:" + queries.Count);
             // Console.ReadKey();
         }
 
-        public HtmlNode Closest(HtmlNode node)
+        public string GetCategory(HtmlNode node)
         {
-            node = node.ParentNode.ParentNode;
-            while (node.PreviousSibling != null)
+            while (node.ParentNode != null)
             {
-                if (node.PreviousSibling.Name.ToLower() == "div")
+                if (node.ParentNode.Name.ToLower() == "div"&& node.ParentNode.Attributes["class"]?.Value== "Container-20015-1")
                 {
-                    if (node.PreviousSibling.Attributes["id"] != null && node.PreviousSibling.Attributes["id"].Value.IndexOf("sec") > -1)
-                    {
-                        return node.PreviousSibling;
-                    }
+                    return node.ParentNode.FirstChild.NextSibling.InnerText;
                 }
 
-                node = node.PreviousSibling;
-
-
+                node = node.ParentNode;
             }
-            return null;
+            return "";
         }
     }
 }

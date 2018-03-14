@@ -13,16 +13,16 @@ using System.Threading.Tasks;
 
 namespace CityCouncilMeetingProject
 {
-    public class LathrupVillageMI : City
+    public class LathrupVillageMICity : City
     {
         private List<string> docUrls = null;
 
-        public LathrupVillageMI()
+        public LathrupVillageMICity()
         {
             cityEntity = new CityInfo()
             {
-                CityId = "LathrupVillageMI",
-                CityName = "Lathrup",
+                CityId = "LathrupVillageMICity",
+                CityName = "Lathrup Village City",
                 CityUrl = "http://www.lathrupvillage.org/",
                 StateCode = "MI"
             };
@@ -36,26 +36,31 @@ namespace CityCouncilMeetingProject
                 Directory.CreateDirectory(localDirectory);
             }
 
-            this.docUrls = File.ReadAllLines("LathrupVillageMI_Urls.txt").ToList();
+            this.docUrls = File.ReadAllLines("LathrupVillageMICity_Urls.txt").ToList();
         }
 
         public void DownloadCouncilPdfFiles()
         {
-            var docs = this.LoadDocumentsDoneSQL();
-            var queries = this.LoadQueriesDoneSQL();
-            // var docs = new List<Documents>();
-            // var queries = new List<QueryResult>();
+            //var docs = this.LoadDocumentsDoneSQL();
+            //var queries = this.LoadQueriesDoneSQL();
+             var docs = new List<Documents>();
+             var queries = new List<QueryResult>();
             WebClient c = new WebClient();
             HtmlWeb web = new HtmlWeb();
             Dictionary<Regex, string> dateRegFormatDic = new Dictionary<Regex, string>();
             dateRegFormatDic.Add(new Regex("[A-Za-z]+[\\s]{0,1}[0-9]{1,2},[\\s]{0,1}[0-9]{4}"), "");
+            dateRegFormatDic.Add(new Regex("[a-zA-Z]+. [0-9]{2} [\\s]{0,2}[0-9]{4}"), "MMM dd yyyy");
             dateRegFormatDic.Add(new Regex("[a-zA-Z]+ [\\s]{0,2}[0-9]{4}"), "MMMM yyyy");
+            dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{2}-[0-9]{4}"), "MM-dd-yyyy");
             dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{2}-[0-9]{2}"), "MM-dd-yy");
             dateRegFormatDic.Add(new Regex("[0-9]{2}-[0-9]{1}-[0-9]{2}"), "MM-d-yy");
             dateRegFormatDic.Add(new Regex("[0-9]{1}-[0-9]{2}-[0-9]{2}"), "M-dd-yy");
             dateRegFormatDic.Add(new Regex("[0-9]{1}-[0-9]{1}-[0-9]{2}"), "M-d-yy");
+            dateRegFormatDic.Add(new Regex("[0-9]{1}/[0-9]{2}/[0-9]{2}"), "M/dd/yy");
+            dateRegFormatDic.Add(new Regex("[0-9]{1}/[0-9]{1}/[0-9]{2}"), "M/d/yy");
             dateRegFormatDic.Add(new Regex("[0-9]{8}"), "MMddyyyy");
-            dateRegFormatDic.Add(new Regex("[a-zA-Z]+. [0-9]{2} [\\s]{0,2}[0-9]{4}"), "MMM dd yyyy");
+           
+
             foreach (string url in this.docUrls)
             {
                 var category = "";
@@ -143,7 +148,7 @@ namespace CityCouncilMeetingProject
                     {
                         category = "Zoning Board of Appeals";
                     }
-                    //Console.WriteLine(string.Format("datestr:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
+                   // Console.WriteLine(string.Format("datestr:{0},category:{1}", meetingDate.ToString("yyyy-MM-dd"), category));
                     this.ExtractADoc(c, this.cityEntity.CityUrl + r.Attributes["href"].Value, category, "pdf", meetingDate, ref docs, ref queries);
                 }
             }

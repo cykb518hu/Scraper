@@ -181,7 +181,7 @@
     <Compile Include="Achilles\ColumbusStClairTownshipMI.cs" />
     <Compile Include="Achilles\EatonTownshipMI.cs" />
     <Compile Include="Achilles\IoscoLivingstonTownshipMI.cs" />
-    <Compile Include="Achilles\LathrupVillageMI.cs" />
+    <Compile Include="Achilles\LathrupVillageMICity.cs" />
     <Compile Include="Achilles\OvidClintonTownshipMI.cs" />
     <Compile Include="Achilles\PlainfieldIoscoTownshipMI.cs" />
     <Compile Include="Achilles\PlainwellMICity.cs" />
@@ -399,7 +399,7 @@
     <Content Include="Config\Achilles\DavisonMICity_Urls.txt" />
     <Content Include="Config\Achilles\EatonCharterTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\IoscoLivingstonTownshipMI_Urls.txt" />
-    <Content Include="Config\Achilles\LathrupVillageMI_Urls.txt" />
+    <Content Include="Config\Achilles\LathrupVillageMICity_Urls.txt" />
     <Content Include="Config\Achilles\OvidClintonTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\PlainfieldIoscoTownshipMI_Urls.txt" />
     <Content Include="Config\Achilles\PlainwellMICityMI_Urls.txt" />
